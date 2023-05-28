@@ -1,0 +1,309 @@
+<!-- EXERCICIO 15 - JUNÇÃO DE TABELAS(JOIN)-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junção de tabelas(JOIN)</title>
+    <style>
+
+        table{
+            border: 2px solid #111;
+            border-collapse: collapse;
+        }
+
+        th,td{
+            border: 2px solid #111;
+            padding: 5px;
+        }
+
+        #PK{
+            background: red;
+            color: #fff;
+        }
+
+        #FK{
+            background: purple;
+            color: #fff;
+        }
+
+        #tb-0{
+            background: green;            
+        }
+
+        #tb-1{
+            background: orange;
+        }
+
+        #tb-2{
+            background: yellow;
+        }
+
+        .list{
+            width: 350px;            
+            margin-top: 20px;
+        }
+
+        .list li{
+            font-size: 20px;
+            height: 50px;;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Junção de tabelas(JOIN)</h1>
+        </div>
+        <div>
+            <ul>
+                <li>Dependendo do tipo de banco de dados, podemos ter mais de uma tabela;</li>
+                <li>Estas tabelas podem se relacionar uma com a outra, mas devemos informar as tabelas que farão a relação e junção, e também definir as chaves estrangeiras</li>
+                <li>Para isso é utilizado o comando join para juntar as tabelas, e para dar sentido a essa seleção usamos o parâmetro on;</li>
+            </ul>
+        </div>
+    </header>
+    
+    <section>
+        <div class="content">
+            <div class="infos">
+                <p>O comando join se divide em 3 partes que são: </p>
+                <div class="list">
+                    <ul>                        
+                        <li>inner join ou join --- Não prioriza a seleção de nenhuma tabela</li>                        
+                        <li>left join --- Prioriza a tabela a esquerda na seleção</li>                        
+                        <li>right join --- Da prioridade a tabela a direita</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="table">
+                <h2>Definindo Foreign Key(chave estrangeira) de uma tabela</h2>
+                <table>
+                    <tr>
+                        <th>field</th>
+                        <th>type</th>
+                        <th>null</th>
+                        <th>key</th>
+                        <th>default</th>
+                        <th>extra</th>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>int(11)</td>
+                        <td>no</td>
+                        <td id="PK">PRI</td>
+                        <td>null</td>
+                        <td>auto_increment</td>
+                    </tr>
+                    <tr>
+                        <td>nome</td>
+                        <td>varchar(30)</td>
+                        <td>no</td>
+                        <td> </td>
+                        <td>null</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>profissao</td>
+                        <td>varchar(10)</td>
+                        <td>yes</td>
+                        <td> </td>
+                        <td>null</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>sexo</td>
+                        <td>enum('M','F')</td>
+                        <td>yes</td>
+                        <td> </td>
+                        <td>null</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>nacionalidade</td>
+                        <td>varchar(20)</td>
+                        <td>yes</td>
+                        <td> </td>
+                        <td>Brasil</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>cursodousuario</td>
+                        <td>int(11)</td>
+                        <td>yes</td>
+                        <td id="FK">MUL</td>
+                        <td>null</td>
+                    </tr>
+                </table>    
+                <span>
+                    <h4>PRI - PRIMARY KEY(CHAVE PRIMÁRIA)<br>MUL - FOREIGN KEY(CHAVE ESTRANGEIRA)</h4>                    
+                </span>
+            </div>
+            <div class="table">
+                <h2>Juntando duas tabelas</h2>
+                <table>
+                    <tr>
+                        <th id="tb-0" colspan="2">Tabela persons(pessoas)</th>
+                        <th id="tb-1" colspan="4">Tabela courses(cursos)</th>
+                    </tr>
+                    <tr>
+                        <th id="PK">id</th>
+                        <th>nome</th>                                                
+                        <th id="PK">idcurso</th>
+                        <th>nome</th>
+                        <th>ano</th>
+                        <th id="FK">idusuario</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Kesley Keven</th>                                                
+                        <td>5</td>
+                        <td>HTML5</td>
+                        <td>2021</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Isabela Silva</td>                                                
+                        <td>3</td>
+                        <td>PYTHON</td>
+                        <td>2020</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>                        
+                        <td>Gabriela Costa</td>                                                
+                        <td>9</td>
+                        <td>MYSQL</td>
+                        <td>2018</td>
+                        <td>3</td>
+                    </tr>
+                </table>
+                <span>
+                    <h4>Observando acima, temos uma junção de tabelas, onde a sua relação é formada pela chave primária da tabela persons com a chave estrangeira da outra tabela chamada courses.</h4>
+                </span>
+            </div>
+            <div class="table">
+                <h2>Juntando várias tabelas</h2>
+                <h4>Para juntar diversas tabelas, criamos uma tabela extra como se fosse um filtro de uma relação, e inserimos as chaves estrangeiras das chaves primarias de outras tabelas dentro dessa tabela extra</h4>
+                <table>
+                    <tr>
+                        <th id="tb-2" colspan="6">Tabela view(visualizar)</th>
+                    </tr>
+                    <tr>                        
+                        <th>field</th>
+                        <th>type</th>
+                        <th>null</th>
+                        <th>key</th>
+                        <th>default</th>
+                        <th>extra</th>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>int(11)</td>
+                        <td>no</td>
+                        <td id="PK">PRI</td>
+                        <td>null</td>
+                        <td>auto_increment</td>
+                    </tr>
+                    <tr>
+                        <td>data</td>
+                        <td>date</td>
+                        <td>yes</td>
+                        <td> </td>
+                        <td>null</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>idusuario</td>
+                        <td>int(11)</td>
+                        <td>yes</td>
+                        <td id="FK">MUL</td>
+                        <td>null</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>idcurso</td>
+                        <td>int(11)</td>
+                        <td>yes</td>
+                        <td id="FK">MUL</td>
+                        <td>null</td>
+                        <td> </td>
+                    </tr>
+                </table>
+                <span>
+                    <div class="list">
+                        <ul>
+                            <li id="tb-0">1 - Tabela persons</li>
+                            <li id="tb-2">3 - Tabela view</li>
+                            <li id="tb-1">2 - Tabela courses</li>                            
+                        </ul>                                            
+                    </div>
+                    <div>
+                        <h4>Sendo assim, podemos iniciar a junção e o relacionamento entre as tabelas</h4>
+                    </div>
+                </span>
+            </div>
+            <div class="table">
+                <table>
+                    <tr>
+                        <th id="tb-0" colspan="2">Tabela persons(pessoas)</th>
+                        <th id="tb-2" colspan="4">Tabela view(visualizar)</th>
+                        <th id="tb-1" colspan="3">Tabela courses(cursos)</th>
+                    </tr>
+                    <tr>
+                        <th id="PK">id</th>
+                        <th>nome</th>
+                        <th id="PK">id</th>
+                        <th>data</th>
+                        <th id="FK">idusuario</th>
+                        <th id="FK">idcurso</th>
+                        <th id="PK">idcurso</th>
+                        <th>nome</th>
+                        <th>ano</th>                        
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Kesley Keven</td>
+                        <td>1</td>
+                        <td>2021-10-09</td>                        
+                        <td>1</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>HTML5</td>
+                        <td>2021</td>                        
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Isabela Silva</td>                        
+                        <td>2</td>
+                        <td>2020-12-30</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>PYTHON</td>
+                        <td>2020</td>                        
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Gabriela Costa</td>
+                        <td>3</td>
+                        <td>2019-10-01</td>
+                        <td>3</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>MYSQL</td>
+                        <td>2018</td>                        
+                    </tr>
+                </table>
+                <span>
+                    <h4>A tabela view cria o relacionamento e mostra os registros da tabela persons, que se relacionam com a tabela courses através das chaves.<br><br>Aplicando o JOIN e o parâmetro ON corretamente, podemos selecionar e visualizar os registros que se relacionam um com o outro.</h4>
+                </span>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

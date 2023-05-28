@@ -1,0 +1,118 @@
+<!-- EXERCICIO 2 - SQL -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <style>
+
+        table{
+            border: 1px solid #111;
+            border-collapse: collapse;            
+        }
+
+        #tb-title{
+            background: green;
+            color: #fff;
+        }
+
+        th,td{
+            border: 1px solid #111;
+            padding: 10px;
+        }
+
+        .content{            
+            background: #111;
+            display: flex;
+            text-align: center;                    
+        }
+
+        .info{
+            width: 250px;
+            padding: 10px;            
+            color: #fff;
+            border: 5px solid #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>SQL</h1>
+        </div>
+        <div>
+            <ul>
+                <li>Structure Query Language, ou Linguagem de Consulta Estruturada é o termo completo de SQL;</li>
+                <li>É a linguagem de pesquisa declarada padrão para banco de dados relacional;</li>
+                <li>Podemos afirmar que é uma linguagem de programação;</li>
+                <li>Alguns dos principais sistemas que utilizam essa tecnologia são: MYSQL, PostgressSQL, Oracle, MariaDB e SQL Server;</li>
+                <li>A linguagem SQL apresenta uma organização estrutural muito bem definida que divide seus comando em 5 subconjuntos diferentes que são: DQL, DML, DDL, DCL, E DTL;</li>
+                <li>Cada um desses subconjuntos apresenta objetivos específicos;</li>
+            </ul>
+        </div>
+    </header>
+
+    <section>
+        <div class="table">
+            <table>
+                <tr>
+                    <th id="tb-title" colspan="5">SQL</th>
+                </tr>
+                <tr>
+                    <th colspan="5">Subconjunto SQL</th>
+                </tr>
+                <tr>
+                    <th>DQL</th>
+                    <th>DML</th>
+                    <th>DDL</th>
+                    <th>DCL</th>
+                    <th>DTL</th>
+                </tr>
+                <tr>
+                    <td rowspan="3">select</td>
+                    <td>insert</td>
+                    <td>create</td>
+                    <td>grant</td>
+                    <td>begin</td>
+                </tr>
+                <tr>
+                    <td>insert</td>
+                    <td>after</td>
+                    <td rowspan="2">revoke</td>
+                    <td>commit</td>
+                </tr>
+                <tr>
+                    <td>delete</td>
+                    <td>drop</td>
+                    <td>rollback</td>
+                </tr>
+            </table>
+        </div>
+        <div class="content">
+            <div class="info">                
+                <h2>DQL: Linguagem de consulta de dados</h2>
+                <p>O DQL(Data Query Select) é o conjunto SQL que define o comando mais popular da linguagem o select.</p>                
+            </div>
+            <div class="info">
+                <h2>DML: Linguagem de manipulação de dados</h2>
+                <p>O DML(Data Manipulation Language) é o subconjunto do SQL que define os comando mais usados para manipular os dados armazenados em um banco. Esse é um dos subconjuntos mais utilizados.</p>
+            </div>
+            <div class="info">
+                <h2>DDL: Linguagem de definição de dados</h2>
+                <p>O DDL(Data Definition Language) é o subconjunto SQL que apresenta comandos usados para gerenciar as estruturas do banco de dados.</p>
+            </div>
+            <div class="info">
+                <h2>DCL: Linguagem de controle de dados</h2>
+                <p>O DCL(Data Control Language) é o subconjunto no qual encontramos comando para controlar o acesso aos dados da nossa base ou banco.</p>
+            </div>
+            <div class="info">
+                <h2>DTL: Linguagem de transação de dados</h2>
+                <p>O DTL(Data Transaction Language) - Também conhecido como TCL(Transaction Control Language) - é o subconjunto do SQL que define comandos que utilizamos quando é necessário gerenciar transações feitas no banco ou base.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

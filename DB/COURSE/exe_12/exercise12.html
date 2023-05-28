@@ -1,0 +1,74 @@
+<!-- EXERCICIO 12 - GERENCIANDO CÓPIAS DE SEGURANÇA MYSQL -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciando cópias de segurança MYSQL</title>
+    <style>
+
+        .info{
+            background: #111;
+            color: #fff;
+            border: 5px groove orange;
+            width: 300px;            
+            padding: 10px;
+            display: inline-block;            
+        }
+
+        .info h2{
+            border-left: 5px solid orange;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Gerenciando cópias de segurança MYSQL</h1>
+        </div>
+        <div>
+            <ul>
+                <li>Durante a manipulação de um banco de dados, erros podem acontecer, como a exclusão de uma tabela ou registro;</li>
+                <li>Mas é fundamental criar uma cópia, ou fazer um backup para recuperar dados perdidos, pois dados apagados não retornam;</li>
+                <li>O backup também é conhecido com dump;</li>
+                <li>Para fazer o backup ou dump, precisamos exportar a base de dados desejada e os seus arquivos .sql;</li>
+                <li>Não so podemos exportar, mas também importar arquivos .sql para incluir ao banco de dados;</li>
+            </ul>
+        </div>
+    </header>
+
+    <section>
+        <div class="content">
+            <div class="info">
+                <h2>Exportação</h2>
+                <div>                    
+                    <ol>
+                        <li>Banco de dados</li>                           
+                        <ul>
+                            <li>persons.sql</li>
+                            <li>register.sql</li>
+                        </ul>
+                        <li>Pasta</li>
+                    </ol>
+                </div>              
+            </div>
+            <div class="info">
+                <h2>Importação</h2>
+                <div>                        
+                    <ol>
+                        <li>Pasta</li>
+                        <ul>
+                            <li>persons.sql</li>
+                            <li>register.sql</li>
+                        </ul>
+                        <li>Banco de dados</li>
+                    </ol>
+                </div>
+            </div>                                  
+        </div>
+    </section>
+</body>
+</html>

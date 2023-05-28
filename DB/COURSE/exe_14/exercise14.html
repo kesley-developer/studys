@@ -1,0 +1,350 @@
+<!-- EXERCICIO 14 - OBTENDO DADOS DAS TABELAS(SELECT) -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtendo dados das tabelas(SELECT)</title>
+    <style>
+
+        table{
+            border: 2px solid #111;
+            border-collapse: collapse;
+        }
+
+        th,td{
+            border: 2px solid #111;
+            padding: 10px;
+        }        
+
+        th{
+            background: orange;
+        }        
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Obtendo dados das tabelas(SELECT)</h1>
+        </div>
+        <div>
+            <ul>
+                <li>Podemos visualizar dados de uma tabela com o comando select;</li>
+                <li>Quando utilizamos o comando select, estamos prontos para realizar uma busca em uma tabela ou visualizar dados gerais;</li>
+                <li>Assim como usamos select * from nomedatabela para visualizar todas as linhas e colunas, podemos também filtrar a seleção, como ver de forma ordenada;</li>
+                <li>Para isso usamos os parâmetro do comando select;</li>
+            </ul>
+        </div>
+    </header>
+
+    <section>
+        <div class="content">
+            <div class="infos">
+                <div class="table">
+                    <h2>Seleção geral</h2>
+                    <p>Seleção de todos os registros da tabela</p>
+                    <table>
+                        <tr>
+                            <th>id</th>
+                            <th>nome</th>
+                            <th>profissao</th>
+                            <th>nascimento</th>
+                            <th>sexo</th>
+                            <th>nacionalidade</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Bryan Silva</td>
+                            <td>Médico</td>
+                            <td>1985-07-29</td>
+                            <td>M</td>
+                            <td>Inglaterra</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ana Clara</td>
+                            <td>Atriz</td>
+                            <td>1999-09-02</td>
+                            <td>F</td>
+                            <td>Brasil</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Caroline Souza</td>
+                            <td>Dentista</td>
+                            <td>1990-03-01</td>
+                            <td>F</td>
+                            <td>EUA</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Allan Costa</td>
+                            <td>Programador</td>
+                            <td>1994-11-10</td>
+                            <td>M</td>
+                            <td>Brasil</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Beatriz Gonzaga</td>
+                            <td>Auxiliar Administrativo</td>                            
+                            <td>2001-12-12</td>
+                            <td>F</td>
+                            <td>Portugal</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class='table'>
+                    <h2>Ordenação crescente</h2>
+                    <p>Selecionando e mostrando todos os registros de forma crescente. Também podemos fazer a seleção decrescente</p>
+                    <table>
+                        <tr>
+                            <th>id</th>                            
+                            <th>nome</th>
+                            <th>profissao</th>
+                            <th>nascimento</th>
+                            <th>sexo</th>
+                            <th>nacionalidade</th>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Allan Costa</td>
+                            <td>Programador</td>
+                            <td>1994-11-10</td>
+                            <td>M</td>
+                            <td>Brasil</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ana Clara</td>
+                            <td>Atriz</td>
+                            <td>1999-09-02</td>
+                            <td>F</td>
+                            <td>Brasil</td>
+                        </tr>         
+                        <tr>
+                            <td>5</td>
+                            <td>Beatriz Gonzaga</td>
+                            <td>Auxiliar admininstrativo</td>
+                            <td>2001-12-12</td>
+                            <td>F</td>
+                            <td>Portugal</td>
+                        </tr>           
+                        <tr>
+                            <td>1</td>
+                            <td>Bryan Silva</td>                            
+                            <td>Médico</td>
+                            <td>1985-07-29</td>
+                            <td>M</td>
+                            <td>Inglaterra</td>
+                        </tr>    
+                        <tr>
+                            <td>3</td>
+                            <td>Caroline Souza</td>
+                            <td>Dentista</td>
+                            <td>1990-03-01</td>
+                            <td>F</td>
+                            <td>EUA</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table">
+                    <h2>Seleção de colunas</h2>
+                    <p>Podemos informar as colunas que desejamos selecionar e visualizar</p>
+                    <table>
+                        <tr>
+                            <th>nome</th>
+                            <th>sexo</th>
+                        </tr>
+                        <tr>
+                            <td>Bryan Silva</td>
+                            <td>M</td>
+                        </tr>
+                        <tr>
+                            <td>Ana Clara</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>Caroline Souza</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>Allan Costa</td>
+                            <td>M</td>
+                        </tr>
+                        <tr>
+                            <td>Beatriz Gonzaga</td>
+                            <td>F</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table">
+                    <h2>Seleção de linhas</h2>
+                    <p>Especificamos os tipos de linhas que queremos selecionar com o parâmetro WHERE</p>
+                    <table>
+                        <tr>
+                            <th>id</th>
+                            <th>nome</th>
+                            <th>profissao</th>
+                            <th>nascimento</th>
+                            <th>sexo</th>
+                            <th>nacionalidade</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Bryan Silva</td>
+                            <td>Médico</td>
+                            <td>1985-07-29</td>
+                            <td>M</td>
+                            <td>Inglaterra</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Allan Costa</td>
+                            <td>Programador</td>
+                            <td>1994-11-10</td>
+                            <td>M</td>
+                            <td>Brasil</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table">
+                    <h2>Operadores de relação</h2>
+                    <p>Informamos a relação do campo para a seleção</p>
+                    <table>
+                        <tr>
+                            <th>nome</th>
+                            <th>nascimento</th>
+                        </tr>
+                        <tr>
+                            <td>Allan Costa</td>                            
+                            <td>1994-11-10</td>
+                        </tr>
+                    </table>              
+                    <div class="table-in-table">
+                        <p>Alguns dos operadores de relação são: </p>
+                        <table>
+                            <tr>
+                                <th>Operador</th>
+                                <th>Relação</th>
+                            </tr>
+                            <tr>
+                                <td>in()</td>
+                                <td>Em</td>
+                            </tr>
+                            <tr>
+                                <td>between-and</td>
+                                <td>Entre</td>
+                            </tr>        
+                            <tr>
+                                <td>or</td>
+                                <td>Ou</td>
+                            </tr>          
+                            <tr>
+                                <td>like</td>
+                                <td>Que tenham determinado caractere no valor</td>
+                            </tr>          
+                            <tr>
+                                <td>></th>
+                                <td>Maior</td>
+                            </tr>
+                            <tr>
+                                <td><</td>
+                                <td>Menor</td>
+                            </tr>
+                            <tr>
+                                <td>>=</td>
+                                <td>Maior ou igual</td>
+                            </tr>
+                            <tr>
+                                <td><=</td>
+                                <td>Menor ou igual</td>
+                            </tr>
+                            <tr>
+                                <td>!=</td>
+                                <td>Diferente</td>
+                            </tr>
+                        </table>
+                    </div>                                        
+                </div>
+                <div class="table">
+                    <h2>Distinguindo</h2>
+                    <p>Fazemos a distinção de valores. Simplificando, é feita a seleção de todos os valores, mas são excluidos os repetidos.</p>
+                    <table>
+                        <tr>
+                            <th>sexo</th>
+                        </tr>
+                        <tr>
+                            <td>M</td>                            
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table">
+                    <h2>Funções de agregação</h2>
+                    <p>Podemos somar valores de um campo, mostrar o maior e menor valor registrado ou mostrar a média</p>
+                    <table>
+                        <tr>
+                            <th>count</th>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                        </tr>
+                    </table>
+                    <div class="table-in-table">
+                        <p>Algumas das funções de agregação são: </p>
+                        <table>
+                            <tr>
+                                <th>Função</th>
+                                <th>Agregação</th>
+                            </tr>
+                            <tr>
+                                <td>count()</td>
+                                <td>Contar</td>
+                            </tr>
+                            <tr>
+                                <td>max()</td>
+                                <td>Valor máximo</td>
+                            </tr>
+                            <tr>
+                                <td>min()</td>
+                                <td>Valor mínimo</td>
+                            </tr>
+                            <tr>
+                                <td>sum()</td>
+                                <td>Somar valores</td>
+                            </tr>
+                            <tr>
+                                <td>avg()</td>
+                                <td>Média</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="table">
+                    <h2>Agrupando</h2>
+                    <p>No agrupamento é feito a separação de valores, e se tivermos repetidos, eles se encaixam no mesmo grupo</p>
+                    <table>
+                        <tr>
+                            <th>sexo</th>
+                            <th>count(sexo)</th>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>3</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!-- EXERCICIO 10 - EVITANDO REPETIÇÃO DE DADOS(UNIQUE) -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evitando repetição de dados(UNIQUE)</title>
+    <style>
+
+        table{
+            border: 2px solid #111;
+            border-collapse: collapse;
+        }
+
+        th,td{
+            border: 2px solid #111;
+            padding: 10px;
+        }
+
+        #tb-unique{
+            background: red;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Evitando repetição de dados(UNIQUE)</h1>
+        </div>
+        <div>
+            <ul>
+                <li>É muito comum ter registros que possuem alguns dados parecidos;</li>
+                <li>Mas dependendo do tipo de campo do registro, o valor deve ser único, como o CPF de uma pessoa;</li>
+                <li>Para isso, usamos unique durante a criação ou alteração de uma coluna em uma tabela;</li>
+            </ul>
+        </div>
+    </header>
+
+    <section>
+        <div class="content">
+            <div class="table-0">
+                <table>
+                    <tr>
+                        <th>field</th>
+                        <th>type</th>
+                        <th>null</th>
+                        <th>key</th>
+                        <th>default</th>
+                        <th>extra</th>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>int(11)</td>                 
+                        <td>NO</td>
+                        <td>PRI</td>
+                        <td>null</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>nome</td>
+                        <td>varchar(30)</td>
+                        <td>NO</td>
+                        <td> </td>
+                        <td>null</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>cpf</td>
+                        <td>varchar(12)</td>
+                        <td>NO</td>
+                        <td id="tb-unique">UNI</td>
+                        <td>null</td>
+                        <td> </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="info">
+                <span>
+                    <p>Observando acima temos o cpf com a key UNI. Isso significa que o campo não poderá repetir valores em seus registros.</p>
+                </span>
+                <span>
+                    <p>Lembrando que chave primária é diferente de um valor único. A chave primária é a identificação de um registro, enquanto unique evita a repetição de um mesmo valor em um campo.</p>
+                </span>
+            </div>            
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!-- EXERCICIO 11 - MANIPULANDO LINHAS(UPDATE, DELETE E TRUNCATE) -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando linhas(UPDATE, DELETE E TRUNCATE)</title>
+    <style>
+
+        table{
+            border: 2px solid #111;
+            border-collapse: collapse;
+        }
+
+        th,td{
+            border: 2px solid #111;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Manipulando linhas(UPDATE, DELETE E TRUNCATE)</h1>
+        </div>
+        <div>
+            <ul>
+                <li>Registro, linha ou tupla ambas definições se referem a mesma coisa;</li>
+                <li>Podemos incluir linhas em uma tabela;</li>
+                <li>Vale lembrar que tudo que estiver em linha em uma tabela é um registro, e tudo que se encontra em coluna é um campo;</li>
+                <li>Para manipular os registros de uma tabela utilizamos os comandos update, delete e truncate;</li>
+                <li>Update pe uma instrução que altera ou atualiza os dados de um ou mais registros em uma tabela;</li>
+                <li>Delete é usado para deletar registros da tabela;</li>
+                <li>Truncate remove todas as linhas da tabela, mas a sua estrutura permanece como os campos e sua definição;</li>
+            </ul>
+        </div>
+    </header>
+
+    <section>
+        <div class="content">
+            <div class="table-0">
+                <h2>UPDATE - Erro no NOME e ANO</h2>
+                <table>
+                    <tr>
+                        <th>id</th>
+                        <th>nome</th>
+                        <th>descricao</th>
+                        <th>carga</th>
+                        <th>totalaulas</th>
+                        <th>ano</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td style="background: red; color: #fff;">HTML2</td>
+                        <td>Curso de HTML5</td>
+                        <td>40</td>
+                        <td>37</td>
+                        <td style="background: red; color: #fff;">2089</td>
+                    </tr>
+                </table>                
+            </div>      
+            <div class="table-1">
+                <h2>UPDATE - Atualizando NOME e ANO</h2>
+                <table>
+                    <tr>
+                        <th>id</th>
+                        <th>nome</th>
+                        <th>descricao</th>
+                        <th>carga</th>
+                        <th>totalaulas</th>
+                        <th>ano</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td style="background: green; color: #fff;">HTML5</td>
+                        <td>Curso de HTML5</td>
+                        <td>40</td>
+                        <td>37</td>
+                        <td style="background: green; color: #fff;">2021</td>
+                    </tr>
+                </table>
+            </div>      
+            <div class="info">            
+                <span>
+                    <p>Com o comando update podemos alterar a linha do registro que desejarmos. Mas também temos o comando delete para excluir linhas, e o truncate para remover todos os registro da tabela.</p>
+                </span>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

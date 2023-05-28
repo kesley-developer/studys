@@ -1,0 +1,318 @@
+<!-- EXERCICIO 0 - BANCO DE DADOS -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Dados</title>
+    <style>
+
+        table{
+            border: 1px solid #111; 
+            border-collapse: collapse;                                           
+        }
+                
+        .tables-0,
+        .tables-1{
+            display: inline-block;
+        }
+
+        .tables-0 h2,
+        .tables-1 h2{
+            background: #111;
+            color: #fff;
+            width: 30px;
+            text-align: center;
+            border-radius: 50%;            
+        }
+
+        th,td{
+            border: 1px solid #111;            
+            padding: 5px;
+        }
+                            
+        .infos-relation{
+            border: 2px solid #111;            
+            padding: 20px;
+            width: 500px;            
+        }                
+
+        .infos-relation h3{
+            text-align: center;
+        }
+
+        .infos-relation h2{
+            text-align: center;
+            font-size: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Banco de Dados</h1>            
+        </div>
+        <div>
+            <ul>
+                <li>Banco de dados ou bases de dados são conjuntos de arquivos relacionados entre si;</li>
+                <li>Esses arquivos podem conter registros sobre pessoas, lugares ou informações em geral;</li>
+                <li>São coleções organizadas de dados que se relacionam de forma a criar algum sentido e dar mais eficiência durante uma pesquisa ou estudo científico;</li>
+            </ul>
+        </div>
+    </header>
+
+    <section>
+        <div class="info">
+            <h2>Modelo relacional</h2>
+            <ul>
+                <li>Sabemos que um banco de dados armazena diversos registro, e por muitas vezes é utilizado mais de uma tabela para inserir registros;</li>
+                <li>Por isso é importante saber o modelo relacional, que aborda a relação de uma ou mais tabelas com outras;</li>
+                <li>Portanto os dados não tem somente ligações, mas também relações;</li>
+            </ul>
+        </div>
+        <div class="tables-0">            
+            <h2>1</h2>
+            <table>                
+                <tr>
+                    <th colspan="2">USERS</th>
+                </tr>
+                <tr>
+                    <th rowspan="5">PK</th>
+                    <th>ID</th>
+                </tr>
+                <tr>
+                    <td>first_name</td>                                        
+                </tr>
+                <tr>
+                    <td>last_name</td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                </tr>
+                <tr>
+                    <td>password_hash</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tables-0">
+            <h2>2</h2>
+            <table>
+                <tr>
+                    <th colspan="3">USER_ROLES</th>
+                </tr>
+                <tr>
+                    <th>PK</th>
+                    <th>FK</th>
+                    <td>user_id</td>                    
+                </tr>
+                <tr>
+                    <th>PK</th>
+                    <th>FK</th>
+                    <td>role_id</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tables-0">
+            <h2>3</h2>
+            <table>
+                <tr>
+                    <th colspan="2">PROFILES</th>
+                </tr>
+                <tr>
+                    <th>PK</th>
+                    <th>ID</th>
+                </tr>
+                <tr>
+                    <th rowspan="3">FK</th>
+                    <td>bio</td>                                                            
+                </tr>                
+                <tr>
+                    <td>description</td>                    
+                </tr>
+                <tr>
+                    <td>user_id</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tables-0">
+            <h2>4</h2>
+            <table>
+                <tr>
+                    <th>ROLES</th>
+                </tr>             
+                <tr>
+                    <th rowspan="2">PK</th>
+                    <th>ID</th>
+                </tr>   
+                <tr>
+                    <td>name</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>O Diagrama 1,2 e 3 retrata usuários e permissões e o número 4 aborda perfis de usuário. Para um melhor entendimento vamos preencher cada entidade, com informações aleatórias para uma representação de dados verdadeiros.</p>            
+            <div class="tables-1">
+                <h2>1</h2>
+                <table>
+                    <tr>
+                        <th colspan="5">USERS</th>                        
+                    </tr>
+                    <tr>
+                        <th>id</th>
+                        <th>first_name</th>
+                        <th>last_name</th>
+                        <th>email</th>
+                        <th>password_hash</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Kesley</td>
+                        <td>Keven</td>
+                        <td>kes@email.com</td>
+                        <td>k140a</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Marcos</td>
+                        <td>Vieira</td>
+                        <td>mar@email.com</td>
+                        <td>b3001</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Isabela</td>
+                        <td>Oliveira</td>
+                        <td>isa@email.com</td>
+                        <td>isa123</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Maria</td>
+                        <td>Moreira</td>
+                        <td>mar@email.com</td>
+                        <td>32maria</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tables-1">
+                <h2>2</h2>
+                <table>
+                    <tr>
+                        <th colspan="2">USER_ROLES</th>
+                    </tr>
+                    <tr>
+                        <th>user_id</th>
+                        <th>role_id</th>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tables-1">
+                <h2>3</h2>
+                <table>
+                    <tr>
+                        <th colspan="2">ROLES</th>
+                    </tr>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>                        
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Admin</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Editor</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Guest</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tables-1">
+                <h2>4</h2>
+                <table>
+                    <tr>
+                        <th colspan="4">PROFILES</th>
+                    </tr>
+                    <tr>
+                        <th>id</th>
+                        <th>bio</th>
+                        <th>description</th>
+                        <th>user_id</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Sou Kesley!</td>
+                        <td>lorem ipsum</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sou Isabela!</td>
+                        <td>lorem ipsum</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Sou Marcos!</td>
+                        <td>lorem ipsum</td>
+                        <td>2</td>
+                    </tr>
+                </table>
+            </div>
+            <span>
+                <p>Cada tabela contem seus valores de acordo com o registro, mas algumas colunas devem ter valores únicos para evitar valores iguais, tal como a ID que informa o número de identificação de tal registro. Está ID é uma PK(Primary Key) que significa uma Chave Primaria, cujo valor é a identificação da coluna registrada.</p>            
+            </span>
+            <span>
+                <p>Também temos a FK(Foreign Key), seu significado é chave estrangeira, pois durante o relacionamento de uma tabela com a outra, alguma tabela recebe a chave primária de outra, mas tal tabela já tem a sua, então se transforma em uma chave estrangeira.</p>
+            </span>
+        </div>
+        <div>
+            <p>Lembrando que as entidades(tabelas) se relacionam uma com as outras. Esses tipos de relacionamento podem ser os seguintes:</p>            
+            <div class="infos-relation">                                
+                <h2>Tipos de relacionamentos</h2>
+                <div>
+                    <div>
+                        <h3>One-to-one(um para um)</h3>
+                        <p>Em uma relação um-para-um, cada registro na primeira tabela pode ter somente um registro correspondente na segunda tabela, e cada registro na segunda tabela pode ter somente um registro correspondente na primeira tabela. Essa relação não é comum porque, geralmente, as informações relacionadas dessa maneira são armazenadas na mesma tabela. Você poderia usar uma relação um-para-um para dividir uma tabela com muitos campos, isolar parte de uma tabela por motivos de segurança ou armazenar informações que se apliquem apenas a um subconjunto da tabela principal. Quando você identifica esse tipo de relação, ambas as tabelas devem compartilhar um campo em comum.</p>
+                    </div>                
+                    <div>
+                        <h3>One-to-many(um para muitos)</h3>
+                        <p>Vamos usar como exemplo um banco de dados de acompanhamento de pedidos que inclua uma tabela Clientes e uma tabela Pedidos. Um cliente pode fazer qualquer número de pedidos. Assim, para qualquer cliente representado na tabela Clientes, pode haver vários pedidos representados na tabela Pedidos. A relação entre a tabela Clientes e a tabela Pedidos é uma relação um-para-muitos.</p>
+                    </div>
+                    <div>
+                        <h3>Many-to-many(muitos para muitos)</h3>
+                        <p>Agora, vamos ver a relação entre uma tabela Produtos e uma tabela Pedidos. Um único pedido pode incluir mais de um produto. Por outro lado, um único produto pode constar em vários pedidos. Assim, para todos os registros da tabela Pedidos, pode haver vários registros na tabela Produtos. Além disso, para cada registro na tabela Produtos, pode haver muitos registros na tabela Pedidos. Essa relação é denominada relação muitos-para-muitos. Observe que para detectar relações muitos-para-muitos existentes entre as tabelas é importante considerar ambos os lados da relação. <br><br> Para representar uma relação muitos-para-muitos, você deve criar uma terceira tabela, geralmente chamada de tabela de junção, que divide a relação muitos-para-muitos em duas relações um-para-muitos. Insira a chave primária de cada uma das duas tabelas na terceira tabela. Como resultado, a terceira tabela registra cada ocorrência, ou instância, da relação. Por exemplo, a tabela Pedidos e a tabela Produtos possuem uma relação muitos-para-muitos que é definida criando-se duas relações um-para-muitos com a tabela Detalhes do Pedido. Um pedido pode ter muitos produtos, e cada produto pode aparecer em muitos pedidos.</p>
+                    </div>                           
+                </div>                
+            </div>
+            <span>
+                <p>Porém, o relacionamento mais utilizado é o One-to-many(um para muitos)</p>
+            </span>
+        </div>
+        <div class="info">
+            <p>Vamos observar mais um exemplo de modelo relacional abaixo</p>
+            <span>
+                <img src="example.jpg" alt="model">                
+            </span>
+        </div>
+    </section>
+</body>
+</html>

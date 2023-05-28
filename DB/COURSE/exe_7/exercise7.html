@@ -1,0 +1,102 @@
+<!-- EXERCICIO 7 - AJUSTANDO A ESTRUTURA DO BANCO DE DADOS -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustando a estrutura do banco de dados</title>
+    <style>
+
+        table{
+            border: 1px solid #111;
+            border-collapse: collapse;
+        }
+
+        th,td{
+            border: 1px solid #111;
+            padding: 10px;
+        }
+
+        th{
+            background: orange;
+            color: #111;
+        }
+
+        #tb-title{
+            background: #111;
+            color: #fff;
+            font-size: 24px;            
+        }
+
+        #id{
+            background: orangered;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Ajustando a estrutura do banco de dados;</h1>
+        </div>
+        <div>
+            <ul>
+                <li>Pudemos observas nos exemplos anteriores, como criamos uma tabela no banco de dados;</li>
+                <li>Porém, devemos fazer ajustes a tabela para evitarmos diversos tipos de erros, como a repetição de um mesmo registro ou valor deste registro;</li>
+                <li>Para iniciar o passo a passo devemos definir uma chave primária;</li>
+                <li>Chave primária, também conhecida como Primary Key ou simplesmente PK, é um campo ou conjunto de campos com valores exclusivos por toda a tabela;</li>
+                <li>Com o conceito de PK(primary key), os valores da chave podem ser usados para se refirir aos registros inteiros, porque cada registro tem um valor diferente para a chave;</li>
+                <li>Cada tabela só pode ter uma chave primária;</li>
+            </ul>
+        </div>
+    </header>
+
+    <section>
+        <div class="content">
+            <div class="table">
+                <h2>Exemplo de tabela: </h2>
+                <table>
+                    <tr>
+                        <th id="tb-title" colspan="7">PESSOAS</th>
+                    </tr>
+                    <tr>
+                        <th>id</th>
+                        <th>nome</th>
+                        <th>nascimento</th>
+                        <th>sexo</th>
+                        <th>peso</th>
+                        <th>altura</th>
+                        <th>nacionalidade</th>
+                    </tr> 
+                    <tr>
+                        <td id="id">1</td>
+                        <td>"Dados do nome"</td>
+                        <td>"Dados do nascimento"</td>
+                        <td>"Dados do sexo"</td>
+                        <td>"Dados do peso"</td>
+                        <td>"Dados da altura"</td>
+                        <td>"Dados da nacionalidade"</td>
+                    </tr>   
+                    <tr>
+                        <td id="id">2</td>
+                        <td>"Dados do nome"</td>
+                        <td>"Dados do nascimento"</td>
+                        <td>"Dados do sexo"</td>
+                        <td>"Dados do peso"</td>
+                        <td>"Dados da altura"</td>
+                        <td>"Dados da nacionalidade"</td>
+                    </tr>                
+                </table>
+            </div>
+            <div class="info">  
+                <span>
+                    <p>Acima temos a base de dados chamada pessoas, juntamente com a tabela. Neste tabela temos o id, cujo local é a chave primária de um registro. Nesta chave primária não podemos ter repetição de valores, pois ela é praticamente a identificação da coluna.</p>
+                </span>                
+            </div>
+        </div>
+    </section>
+</body>
+</html>

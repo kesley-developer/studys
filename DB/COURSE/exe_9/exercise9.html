@@ -1,0 +1,96 @@
+<!-- EXERCICIO 9 - ALTERANDO A ESTRUTURA DA TABELA(ALTER TABLE E DROP TABLE) -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterando a estrutura da tablea(ALTER TABLE e DROP TABLE)</title>
+    <style>
+
+        table{
+            border: 2px solid #111;
+            border-collapse: collapse;
+        }
+
+        th,td{
+            border: 2px solid #111;
+            padding: 10px;
+        }
+
+        #new-column{
+            background: red;
+            border: 5px solid #111;            
+            color: #fff;            
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Alterando a estrutura da tabela(ALTER TABLE e DROP TABLE)</h1>
+        </div>
+        <div>
+            <ul>
+                <li>Ao inserir dados a tabela, podemos modificar sua estrutura;</li>
+                <li>Como alterar um campo ou elimina-lo;</li>
+                <li>Para efetura isso utilizamos alter table e drop table;</li>
+                <li>A funcionalidade do alter table serve para alterar a estrutura de uma table, ou seja, com ele podemos adicionar um novo campo a nossa tabela;</li>
+                <li>O drop table é usado para eliminar um campo ou coluna da tabela;</li>
+            </ul>            
+        </div>
+    </header>
+
+    <section>
+        <div class="content">
+            <div class="table-0">
+                <h2>Adicionando campo</h2>
+                <table>                    
+                    <tr>
+                        <th>field</th>
+                        <th>type</th>
+                        <th>null</th>
+                        <th>key</th>
+                        <th>default</th>
+                        <th>extra</th>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>int(11)</td>
+                        <td>NO</td>
+                        <td>PRI</td>
+                        <td>null</td>
+                        <td>auto_increment</td>
+                    </tr>
+                    <tr>
+                        <td>nome</td>
+                        <td>varchar(20)</td>
+                        <td>NO</td>
+                        <td> </td>
+                        <td>null</td>
+                        <td> </td>
+                    </tr>
+                    <tr id="new-column">
+                        <td>profissao</td>
+                        <td>varchar(30)</td>
+                        <td>YES</td>
+                        <td> </td>
+                        <td>null</td>
+                        <td> </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="infos">
+                <span>
+                    <p>Como podemos interpretar acima, mesmo o campo profissao não sendo existente durante a criação de uma tabela, pode ser inserido depois com o comando alter table.</p>
+                </span>   
+                <span>
+                    <p>Com o comando alter table, podemos modificar colunas, renomear ou alterar o nome de uma tabela. Caso quisermos eliminar a tabela usamos o comando drop table.</p>
+                </span>             
+            </div>
+        </div>
+    </section>
+</body>
+</html>

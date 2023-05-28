@@ -1,0 +1,94 @@
+<!-- EXERCICIO 13 - GERENCIANDO BANCO DE DADOS PELO TERMINAL -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciando banco de dados pelo terminal</title>
+    <style>
+
+        .info{
+            background: #111;            
+            width: 300px;
+            display: inline-block;
+            padding: 10px;            
+        }
+
+        .info h3{
+            background: yellow;
+            color: #111;            
+            width: 20px;
+            text-align: center;
+            font-size: 24px;            
+            border-radius: 24px;            
+        }
+
+        .info h4{                    
+            color: #fff;
+        }
+
+        .info p{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Gerenciando banco de dados pelo terminal</h1>
+        </div>        
+        <div>
+            <ul>
+                <li>Para acessar uma base de dados ou gerenciar uma, é muito comum utilizarmos uma ferramenta como o MYSQL Workbench;</li>
+                <li>Porém, o terminal é muito utilizado e comum para acessar ou gerenciar um banco de dados;</li>
+            </ul>
+        </div>
+    </header>
+
+    <section>
+        <div class="content">
+            <div class="info">
+                <span>
+                    <h3>1</h3>
+                    <h4>Acessamos o local do mysql e acessamos o servidor</h4>
+                </span>
+                <span>
+                    <p>c:\xampp\mysql\bin> mysql -u root -h localhost -p</p>                
+                </span>
+            </div>
+            <div class="info">
+                <span>
+                    <h3>2</h3>
+                    <h4>Logo em seguida será necessário informar a senha de acesso</h4>
+                </span>
+                <span>
+                    <p>Enter password: </p>
+                </span>
+            </div>
+            <div class="info">
+                <span>
+                    <h3>3</h3>
+                    <h4>Sendo assim, temos acesso ao servidor e poderemos manipular a base de dados</h4>
+                </span>
+                <span>
+                    <p>MariaDB[(none)]> show databases</p>
+                </span>
+            </div>
+            <div class="info">
+                <span>
+                    <h3>4</h3>
+                    <h4>Caso quisermos usar uma base de dados utilzamos o comand USE</h5>                    
+                </span>
+                <span>
+                    <p>MariaDB[cadaster]> use cadaster</p>
+                </span>
+            </div>            
+            <div>
+                <p>Seguindo o passo a passo, podemos manipular livremente a base de dados. Lembrando que os comandos SQL são os mesmos, porém as devem ser feitos com apenas uma linha no terminal do sistema operacional.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
