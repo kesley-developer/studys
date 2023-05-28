@@ -1,0 +1,108 @@
+<!-- EXERCICIO 14 - DESFAZENDO MUDANÇAS - GIT RESET -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desfazendo mudanças - git reset</title>
+    <style>
+        
+        .command{
+            background: #800080;
+            color: #fff;
+            width: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Desfazendo mudanças - git reset</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <ul>
+                <li>Às vezes precisamos desfazer alterações realizadas em nossos arquivos locais, após os commits terem sido executados;</li>
+                <li>Existe mais de uma maneira de realizar isso;</li>
+                <li>Uma delas é o comando git reset;</li>                
+            </ul>
+        </div>
+        <div>
+            <div>
+                <h2>git reset</h2>
+                <span>
+                    <ul>
+                        <li>Similar ao comando git revert, o git reset permite desfazer alterações;</li>
+                        <li>O git reset move os ponteiros HEAD e do branch atual para um estado especificado;</li>
+                        <li>Além de atualizar os ponteiros de referência do commit, também pode modificar o estado das três arvores;</li>
+                        <li>As principais aplicações do git reset são:</li>
+                        <ul>
+                            <li>Descartar commits em um branch privado;</li>
+                            <li>Desfazer alterações não comitadas, também em uma branch privado;</li>
+                            <li>Tirar arquivos da área de stage;</li>
+                        </ul>
+                        <li>Para descartar commits em um branch público deve-se usar o comando git revert;</li>
+                        <li>Já para descartar alterações no diretório de trabalho, o indicado é o comando git checkout;</li>
+                    </ul>
+                </span>                
+            </div>
+            <div>
+                <h2>git reset - Modos</h2>
+                <span>
+                    <ul>
+                        <li>O git reset possu três modos principais de invocação, correspondendo aos três estados internos da git(árvores): </li>
+                        <ul>
+                            <li>--soft;</li>
+                            <li>--mixed;</li>
+                            <li>--hard;</li>
+                        </ul>
+                        <li>O git ainda possui outros modos adicionais:</li>
+                        <ul>
+                            <li>--merge;</li>
+                            <li>--keep;</li>
+                        </ul>
+                        <li>--soft: Não toca no arquivo de índice ou no diretório de trabalho, mas reseta a HEAD para o commit especificado. Muda todos os arquivos para o estado "Changes to be commited"(é modo seguro);</li>
+                        <li>--mixed: Reseta o índice mas não a árvore de trabalho e relata o que não foi atualizado. É a ação padrão. Tira o que está no stage, não toca no diretório de trabalho(é modo seguro);</li>
+                        <li>--hard: Reseta o índice e a árvore de trabalho. Quaisquer mudanças em arquivos rastreados na árvore de trabalho desde o commit são descartadas. Descarta o que está na stage area, o que não está, e atualizando o diretório de trabalho(não é modo seguro);</li>
+                        <li>--merge: Resta o índice e atualiza os arquivos na árvore de trabalho que são diferentes entre o commit e HEAD, mas mantém aqueles que são diferentes e entre o índice e a árvore de trabalho. Descarta a stage area, atualiza o diretório de trabalho(aborta se não for seguro);</li>
+                        <li>--keep: Reseta o índice e atualiza arquivos na árvore de trabalho que sejam diferentes entre o commit e HEAD. Se um arquivo que é diferente entre o commit e HEAD possui alterações locais, o reset é abortado. Tira o que está na stage area, atualiza o diretório de trabalho(aborta se não for seguro);</li>
+                    </ul>
+                </span>
+            </div>            
+            <div>
+                <h2>git reset x git revert</h2>
+                <span>
+                    <ul>
+                        <li>O git revert é projetado para desfazer de forma segura um commit público, ao passo que reset é projetado para desfazer alterações locais no stage e no diretório de trabalho;</li>
+                        <li>Já o git reset remove completamente um conjunto de alterações, ao passo que o revert mantém as alterações originais, criando um novo commit para desfazê-las;</li>
+                        <li>Não se recomenda usar git reset quando um snapshot foi enviado a um repositório público - outros desenvolvedores se baseiam no commit;</li>
+                    </ul>
+                </span>
+            </div>
+            <div>
+                <h2>git reset - Exemplos</h2>
+                <span>
+                    <ul>
+                        <li>git reset: Reseta a staging area(tira todos os arquivos) para corresponder ao commit mais recente, sem modificar o diretório de trabalho;</li>
+                        <li>git reset --hard: Reseta a staging area e o diretório de trabalho para corresponder ao commit mais recente, todas as alterações no diretório são sobrescritas;</li>
+                        <li>git reset "NomeDoArquivo": Tira o arquivo informado da staging area, sem modificar o diretório de trabalho;</li>
+                        <li>git reset "NomeDoCommit": Move o branch atual para o commit indicado, reseta a staging area para corresponder a ele, mas não altera o diretório de trabalho;</li>
+                        <li>git reset -- hard "NomeDoCommit": Move o branch atual para o commit indicado, e reseta tanto a staging area quanto o diretório de trabalho, para que correspondam ao commit;</li>
+                    </ul>
+                </span>
+            </div>
+            <div>
+                <h2>Exemplo de git reset: </h2>
+                <div class="command">
+                    <p>git reset archive1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

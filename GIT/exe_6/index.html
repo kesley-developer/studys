@@ -1,0 +1,126 @@
+<!-- EXERCICIO 6 - COMANDOS INICIAIS DO GIT - TRÊS ESTADOS -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos iniciais do Git - Três estados</title>
+    <style>
+        .command{
+            background: #800080;
+            width: 50%;
+            padding: 10px;
+        }   
+        
+        .command h2{
+            color: #ffff00;
+        }
+
+        .command p{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Comandos inicias do Git - Três estados</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <ul>
+                <li>Após a instalação do Git, devemos realizar algumas configurações para o usuário;</li>
+                <li>Para isso, abrimos o Git bash e digitamos alguns comando para configurar;</li>
+                <li>Precisamos seguir os três estados para fazer o versionamento corretamente, que são os seguintes estados: modificado, preparado e consolidado;</li>                
+            </ul>    
+        </div>
+        <div>            
+            <div class="command">
+                <h2>Definindo nome do usuario</h2>
+                <p>git config --global user.name "Kesley Keven"</p>
+            </div>
+        </div>
+        <div>
+            <div class="command">
+                <h2>Definindo email do usuário</h2>
+                <p>git config --global user.email "meuemail@gmail.com"</p>
+            </div>
+            <span>
+                <p>Acima definimos o nome de usuário com o comando user.name e o email com user.email.</p>                
+            </span>
+            <span>
+                <p>Agora devemos configurar o diretório raíz caso seja necessário.</p>
+            </span>
+        </div>        
+        <div>
+            <div class="command">
+                <h2>Verificando diretório</h2>
+                <p>pwd</p>
+            </div>
+            <span>
+                <p>Podemos criar, navegar ou excluir arquivos utilizando os comando de terminal, tais como: cd. dir, etc...</p>
+            </span>
+        </div>
+        <div>
+            <div class="command">                    
+                <h2>Iniciando git no diretório(Estado modificado)</h2>
+                <p>git init</p>            
+            </div>
+        </div>
+        <div>
+            <div class="command">
+                <h2>Verificando status</h2>
+                <p>git status</p>
+            </div>
+            <span>
+                <p>Com o comando git status, verificamos informações dos arquivos, e conseguimos saber se o arquivo sofreu modificação ou está pronto para um commit.</p>
+            </span>
+        </div>
+        <div>
+            <div class="command">
+                <h2>Adicionando arquivo ao rastreamento - staged(Estado consolidado)</h2>
+                <p>git add archive.txt</p>
+            </div>
+            <span>
+                <p>Após está etapa, o proximo passo será gravar as alterações feitas ao repositório ou seja, faremos um commit.</p>
+            </span>
+            <div>
+                <div class="command">
+                    <p>git commit -m "Aqui colocamos uma mensagem do por que está sendo feito o commit"</p>
+                </div>
+                <span>
+                    <p>Com -m podemos inserir uma mensagem ao commit</p>
+                </span>
+            </div>
+        </div>        
+        <div>
+            <div class="command">
+                <h2>Verificando log</h2>
+                <p>git log</p>
+            </div>
+            <span>
+                <p>Com este comando podemos verificar informações de cada commit feito com autor, horário e mensagem.</p>
+                <span>
+                    <p>Lembrando que qualquer alteração feita ao arquivo do repositório, devemos preparar o arquivo para commit.</p>
+                </span>
+            </span>
+        </div>        
+        <div>
+            <div class="command">
+                <h2>Preparando arquivo para commit(Estado preparado)</h2>
+                <p>git add *</p>
+            </div>
+            <span>
+                <p>Com isso movemos os arquivos para o estado preparado, portanto agora realizamos o passo a passo para ser feito o estado consolidado(commit).</p>
+                <div class="command">
+                    <p>git commit -m "Alterações foram feitas ao arquivo"</p>
+                </div>
+            </span>            
+        </div>
+    </section>
+</body>
+</html>

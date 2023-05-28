@@ -1,0 +1,71 @@
+<!-- EXERCICIO 10 - HISTÓRICO E VERSÕES - GIT LOG E GIT SHOW -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico e versões - git log e git show</title>
+    <style>
+        .command{
+            background: #800080;
+            color: #fff;
+            padding: 10px;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Histórico e versões - git log e git show</h1>
+        </div>
+    </header>    
+
+    <section>
+        <div>
+            <ul>
+                <li>Ao efetuarmos um commit, informações são geradas;</li>
+                <li>Podemos visualizar essas informações com os comandos git log e git show;</li>
+            </ul>
+        </div>
+        <div>
+            <div>
+                <h2>git log</h2>
+                <span>
+                    <ul>
+                        <li>Com o comando git log podemos visualizar o log completo do commit do git;</li>
+                        <li>O log do commit lista as seguintes informações:</li>
+                        <ul>
+                            <li>Nome do commit(via hash);</li>
+                            <li>Autor;</li>
+                            <li>Email;</li>
+                            <li>Data;</li>
+                            <li>Descrição;</li>
+                        </ul>
+                    </ul>
+                </span>
+                <div class="command">
+                    <p>git log</p>
+                </div>
+                <p>Com git log podemos visualizar informações de cada commit feito no repositório, mas também podemos especificar o arquivo de qual queremos informações com git log "nomedoarquivo.js"</p>
+            </div>
+            <div>
+                <h2>git show</h2>
+                <span>
+                    <ul>
+                        <li>Podemos visualizar as alterações realizadas nos arquivos de um projeto, com detalhes, utilizando o comando git show "nomedocommit";</li>
+                        <li>O nome do commit pode ser obtido com o comando git log, e basta usar a partir dos quatro primeiros caracteres para realizar a consulta;</li>
+                        <li>Se o nome do commit não for fornecido, serão mostrados detalhes do último arquivo consolidado;</li>
+                    </ul>
+                </span>
+                <div class="command">
+                    <p>git show ae4f</p>                    
+                </div>
+                <p>Com o exemplo acima, fornecemos o nome do git juntamente com o comando git show. Com isso serão mostrados informações e alterações feitas ao commit especificado.</p>                
+            </div>
+        </div>
+    </section>
+</body>
+</html>

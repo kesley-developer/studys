@@ -1,0 +1,68 @@
+<!-- EXERCICIO 13 - REVERTENDO COMMITS - GIT REVERT -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revertendo commits - git revert</title>
+    <style>
+        .command{
+            background: #800080;
+            color: #fff;
+            width: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Revertendo commits - git revert</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <ul>
+                <li>Eventualmente teremos a necessidade de reverter um commit;</li>
+                <li>Um exemplo disso, são erros cometidos nos arquivos;</li>
+                <li>Desfazer um commit é basicamente comitar exatamente o oposto do commit em si;</li>
+                <li>O git, na prática, cria um novo commit com as mudanças opostas;</li>
+                <li>Para efetuar está operação, utilizamos o comando git revert;</li>
+            </ul>
+        </div>
+        <div>
+            <div>
+                <h2>git revert</h2>
+                <span>
+                    <ul>
+                        <li>Com o git revert, podemos desfazer as mudanças em um commit, mantendo alterações posteriores intactas;</li>
+                        <li>Os arquivos retornam ao mesmo estado com se o commit revertido nunca tivesse existido;</li>
+                        <li>O git revert é em si, um commit, por isso não é necessário fazer mais nada após executar esse comando;</li>
+                        <li>Precisamos especificar o nome do commit que será revertido, para obter essa informação usamos git lo;</li>
+                        <li>Para reverter o último commit, usamos o comando git revert HEAD;</li>
+                        <li>Caso quisermos cancelar a operação de reversão, utilizamos git revert --abort;</li>
+                        <li>Lembrando que temos algumas regras, que são:</li>
+                        <ol>
+                            <li>Deve-se trabalhar em um diretório de trabalho limpo, executando sempre git add e git commit antes de tentar reverter um commit;</li>
+                            <li>Só devemos reverter um commit caso sejá necessário ou tenha erros;</li>
+                        </ol>
+                    </ul>
+                </span>
+                <div class="command">
+                    <p>git log --oneline</p>
+                </div>                
+                <p>Com git log --oneline podemos visualizar informações dos commits de forma simplificada.</p>
+                <span>
+                    <p>Agora com as informações dos commits, basta especificarmos no comando git revert o nome do commit para fazer a reversão.</p>
+                    <div class="command">
+                        <p>git revert a10fd65</p>                        
+                    </div>
+                </span>
+            </div>                                        
+        </div>
+    </section>
+</body>
+</html>

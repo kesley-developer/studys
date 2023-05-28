@@ -1,0 +1,53 @@
+<!-- EXERCICIO 24 - REMOVENDO COMPLETAMENTE AS MENSAGENS DE COMMIT -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removendo completamente as mensagens de commit</title>
+    <style>
+
+        .command{
+            background: #800080;
+            color: #fff;
+            width: 50%;
+            padding: 10px;            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Removendo completamente as mensagens de commit</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <ul>
+                <li>Ao fazer um commit, inserimos uma mensagem indicando o que foi alterado no arquivo ou informações básicas;</li>
+                <li>Podemos remover todas as mensagens de um commit;</li>                
+            </ul>            
+        </div>
+        <div>
+            <div class="command">
+                <p>git filter-branch --msg-filter "echo ''" -- --all</p>
+            </div>
+            <span>
+                <p>Efetuando o comando acima, todas as mensagens de commit, serão removidas e substituídas por uma string vázia, ou seja, por uma mensagem sem valor.</p>
+            </span>
+            <span>
+                <p>Caso desejarmos enviar estas alterações realizadas ao repositório remoto do GitHub, prosseguimos com o seguinte comando: </p>
+            </span>
+            <div class="command">
+                <p>git push --force --all</p>
+            </div>  
+            <span>
+                <p>Feito isso, o repositório do GitHub será atualizado com as definições que informamos.</p>
+            </span>
+        </div>
+    </section>
+</body>
+</html>

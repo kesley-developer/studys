@@ -1,0 +1,96 @@
+<!-- EXERCICIO 16 - CRIANDO BRANCHES - GIT BRANCH -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando branches - git branch</title>
+    <style>
+
+        .command{
+            background: #800080;
+            color: #fff;
+            width: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Criando branches - git branch</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <ul>
+                <li>Um branch no git é simplesmente um ponteiro móvel para um commit;</li>
+                <li>O nome do branch padrão no git é master;</li>
+                <li>Conforme começamos a fazer commits, recebemos um branch master que aponta para o último commit que foi feito;</li>
+                <li>Cada vez que fazemos um novo commit ele avança automaticamente;</li>
+                <li>Para criar uma nova branch, utilizamos git branch "nomedabranch"</li>
+            </ul>
+            <span>
+                <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Jc-acrrl--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/69payngupg75rqgabwdg.png" alt="branch example">                
+            </span>
+            <span>
+                <p>Com o diagrama acima temos um exemplo de comno funciona uma branch, que é praticamente uma cópia do projeto original, e a partir destas cópias diversos desenvolvedores podem trabalhar e criar uma nova feature(recurso) sem alterar o projeto princiapl que é o main ou master;</p>
+            </span>
+        </div>   
+        <div>
+            <div>      
+                <h2>git branch</h2>      
+                <span>
+                    <ul>
+                        <li>Com o comando git branch, podemos criar uma nova branch;</li>
+                        <li>Lembrando que podemos navegar entre branches e alterar o ponteiro móvel para uma branch, usando o comando git checkout "nomedabranch"</li>                
+                    </ul>                
+                </span>
+                <div>
+                    <div class="command">
+                        <p>git branch test</p>
+                    </div>
+                    <span>
+                        <p>Assim será criada a branch chamada test, que é o local onde podemos fazer alterações e exclusões, sem interferir no projeto principal que é o main ou master.</p>                    
+                    </span>
+                    <span>
+                        <p>Para alterar a branch, utilizamos o comando git checkout. Por exemplo: </p>                    
+                        <div class="command">
+                            <p>git checkout test</p>
+                        </div>
+                        <span>
+                            <p>Com o exemplo acima, a branch foi alterada para a test, sendo assim qualquer commit ou edição não afetará a branch master.</p>                    
+                        </span>
+                        <span>
+                            <p>Também podemos visualizar todas as branches criadas com o comando git branch. Por exemplo: </p>
+                            <div class="command">
+                                <p>git branch</p>
+                            </div>                        
+                        </span>
+                    </span>
+                </div>
+            </div>              
+            <div>
+                <h2>Deletando branches</h2>
+                <span>
+                    <ul>
+                        <li>Podemos deletar branches com o comando git branch -d "nomedabranch"</li>
+                        <li>Lembrando que antes de deletar uma branch, devemos fazer uma merge;</li>
+                        <li>Isso significa que devemos fundir as alterações feitas no branch dentro do projeto princiapl, que é o master ou main;</li>
+                        <li>Para deletar uma branch, usamos git branch -d "nomedabranch";</li>                        
+                    </ul>
+                </span>
+                <div class="command">
+                    <p>git branch -d test</p>
+                </div>
+                <span>
+                    <p>Caso quisermos deletar a branch de qualquer maneira e sem detralhes, utilizamos o -D maiúsculo.</p>
+                </span>
+            </div>            
+        </div>        
+    </section>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!-- EXERCICIO 3 - TIPOS DE SISTEMAS DE CONTROLE DE VERSÃO -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de sistemas de controle de versão</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Tipos de sistemas de controle de versão</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <p>Existem três categorias principais de sistemas de controle de versão: </p>
+            <span>
+                <ul>
+                    <li>VCS Local;</li>
+                    <li>VCS Centralizado;</li>
+                    <li>VCS Distribuido;</li>
+                </ul>
+            </span>
+        </div>                
+        <div>
+            <div>
+                <h2>Sistema de controle de versão locais</h2>
+                <span>
+                    <ul>
+                        <li>Foi um dos primeiros criados, para gerenciamento de código-fonte;</li>
+                        <li>Registram as alterações realizadas em arquivos em um banco de dados, armazenado localmente;</li>
+                        <li>Todas as alterações ficam, assim armazenadas em um único computador;</li>
+                        <li>Trabalho em equipe é muito dificultado;</li>
+                        <li>Exemplos:
+                            <ul>
+                                <li>SCCS - Source Code Control(AT&T);</li>
+                                <li>RCS - Revision Control System(Open Source);</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+            <div>
+                <h2>Sistema de controle de versão centralizados</h2>
+                <span>
+                    <ul>
+                        <li>O histórico de alterações é armazenado em um servidor, acessado por clientes;</li>
+                        <li>Permite assim o trabalho em equipe;</li>
+                        <li>Problemas no servidor podem acabar com o trabalho;</li>
+                        <li>Necessita de conexão de rede constante;</li>
+                        <li>Arquivos somente poderiam ser acessados por um usuário por vez na maioria dos sistemas (há exceções);</li>
+                        <li>Exemplos:
+                            <ul>
+                                <li>Concurrent Version System(CVS)</li>
+                                <li>Apache Subversion(SVN);</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+            <div>
+                <h2>Sistemas de controle de versão distruidos</h2>
+                <span>
+                    <ul>
+                        <li>Similares aos sistemas centralizados, porém sem servidor central para armazenar histórico de alterações;</li>
+                        <li>Cada cliente possui cópia do repositório e do histórico de alterações;</li>
+                        <li>A chance de perder o projeto ou partes dele é minima;</li>
+                        <li>Alimenta o conceito de forking - clonar um projeto, realizar alterações e criar um novo projeto;</li>
+                        <li>Não necessita de conexão de rede permanente;</li>
+                        <li>Exemplos:
+                            <ul>
+                                <li>BitKeeper;</li>
+                                <li>Git;</li>
+                                <li>Mercurial;</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

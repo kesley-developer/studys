@@ -1,0 +1,43 @@
+<!-- EXERCICIO 9 - REMOVENDO ARQUIVOS DO STAGING AREA -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removendo arquivos do staging area</title>
+    <style>
+        .command{
+            background: #800080;
+            color: #fff;
+            width: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Removendo arquivos do staging area</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <ul>
+                <li>Como já sabemos, o staging area é o estado consolidado e etapa onde os arquivos estarão prontos para um commit;</li>
+                <li>Podemos remover arquivos da área de stage utilizando o comando git rm --cached nomedoarquivo.txt;</li>
+            </ul>            
+            <div>
+                <div class="command">
+                    <p>git rm --cached archive.txt</p>                                
+                </div>            
+                <span>
+                    <p>O comando git rm --cached removeu o arquivo do rastreamento ou estado preparado, então caso quisermos realizar um commit teremos que fazer todo preparo novamente.</p>                    
+                </span>
+            </div>
+        </div>        
+    </section>
+</body>
+</html>

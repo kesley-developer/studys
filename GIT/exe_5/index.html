@@ -1,0 +1,88 @@
+<!-- EXERCICIO 5 - SISTEMA DE TRÊS ESTADOS -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de três estados</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Sistema de três estados</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <p>Existem três estados nos quais um código pode se encontrar: </p>
+            <span>
+                <ul>
+                    <li>
+                        <h3>1 - Estado Modificado</h3>
+                        <p>Snapshot atual no qual o trabalho é feito no momento. Arquivos no diretório de trabalho;</p>                                                                        
+                    </li>
+                    <li>
+                        <h3>2 - Estado Preparado</h3>
+                        <p>Os arquivos modificados são marcados em sua versão atual, pronta para ser armazenada no banco de dados. Arquivos no staging Area;</p>
+                    </li>
+                    <li>
+                        <h3>3 - Estado Consolidado</h3>
+                        <p>Dados são salvos no repositório(Banco de dados) onde o histórico é armazenado. Esse estado é compartilhado. Arquivos no diretório do Git;</p>
+                    </li>
+                </ul>
+                <p>Sendo assim, o código-fonte irá passar por estas três etapas durante o versionamento</p>                            
+                <span>
+                    <p>O comando git status mostra o estado no qual os arquivos se encontram.</p>
+                </span>
+            </span>
+        </div>
+        <div>            
+            <div>
+                <h2>Estado Modificado</h2>
+                <span>
+                    <ul>
+                        <li>Arquivos adicionados, modificados ou removidos são marcados como modificados;</li>
+                        <li>Indica que um arquivo sofreu alterações;</li>
+                        <li>Indica também que estão diferentes em relaçção a última versão que está armazenada no banco de dados;</li>                    
+                    </ul>
+                </span>            
+            </div>
+            <div>
+                <h2>Estado Preparado</h2>
+                <span>
+                    <ul>
+                        <li>Arquivo é enviado para a área de preparação antes de ser consolidado;</li>
+                        <li>Os arquivos entram neste estado após uma instrução git add;</li>
+                        <li>Assim, se tornam preparados para serem versionados;</li>                        
+                    </ul>
+                </span>
+            </div>
+            <div>
+                <h2>Estado Consolidado</h2>
+                <span>
+                    <ul>
+                        <li>Os arquivos preparados são salvos em definitivo após a execução de uma instrução git commit;</li>
+                        <li>Uma nova imagem é salva no histórico, contendo o estado dos arquivos salvos;</li>
+                        <li>Arquivos não podem ser consolidados se ainda estiverem no estado modificado;</li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+        <div>
+            <h2>Fluxo de Operação do Git</h2>
+            <span>
+                <ul>
+                    <li>Os arquivos são criados, modificados ou excluídos;</li>
+                    <li>Arquivos que serão incluídos no snapshot são adicionados na área de staging;</li>
+                    <li>Snapshot é criado;</li>
+                    <li>Adicionar modificações ao banco de dados;</li>
+                    <li>Assim, um arquivo vai do estado modificado para staged e então para commited;</li>
+                </ul>
+            </span>
+        </div>
+    </section>
+</body>
+</html>

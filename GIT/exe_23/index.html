@@ -1,0 +1,72 @@
+<!-- EXERCICIO 23 - FAZENDO FORK DE UM REPOSITÓRIO -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazendo fork de um repositório</title>
+    <style>
+
+        .command{
+            background: #800080;
+            color: #fff;
+            width: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Fazendo fork de um repositório</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <ul>
+                <li>No GitHub quando clicamos em fork no repositório de um outro usuário, ele pega o repositório completo dessa pessoa e copia para a nossa conta git;</li>
+                <li>No git podemos editar esses arquivos e depois devolver a essa pessoa com as nossas eidções, e se caso o usuário aceitar, as alterações também entram no repositório dele;</li>
+                <li>Com tudo, caso quisermos contribuir com novas ideias em projetos Open Source(Código Aberto), realizamos um fork;</li>
+            </ul>
+        </div>
+        <div>
+            <div>
+                <h3>1 - Clicar em fork no repositório que desejamos contribuir</h3>
+                <span>
+                    <p>Com isso será criada uma cópia do repositório onde foi feito o fork, ao nosso repositório.</p>
+                </span>
+            </div>
+            <div>
+                <h3>2 - Clonar repositório para nossa máquina com o git - git clone</h3>
+                <div class="command">
+                    <p>git clone git@github.com/kesley-dev/project.git</p>
+                </div>
+                <span>
+                    <p>Efetuando isso, teremos o repositório em nossa máquina com todos os seus commits e informações.</p>
+                </span>                
+            </div>
+            <div>
+                <h3>3 - Enviar alterações para o nosso repositório - git push</h3>
+                <div class="command">
+                    <p>git push origin master</p>
+                </div>
+                <span>
+                    <p>Utilizando o git push, enviamos as alterações para o nosso repositório, porém a nossa objeção é contribuir com o projeto ao qual foi feito fork, e para isso devemos fazer um Pull Request(PR).</p>
+                </span>
+            </div>
+            <div>
+                <h3>4 - Criar um Pull Request(PR)</h3>
+                <span>
+                    <p>Seguindo e prosseguindo com o Pull Request(PR), basta analisarmos corretamente as informações mostradas e criá-lo.</p>                    
+                </span>
+                <span>
+                    <p>A partir disso, a solicitação será enviada para o criador do projeto ao qual foi feito o fork, e caso ele aceite o Pull Request(PR), as edições serão implementadas ao projeto. Dessa maneira deixaremos nossa contribuição.</p>
+                </span>
+            </div>
+        </div>
+    </section>    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!-- EXERCICIO 11 - COMPARANDO ALTERAÇÕES NOS ARQUIVOS - GIT DIFF -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparando alterações nos arquivos - git diff</title>
+    <style>
+        .command{
+            background: #800080;
+            color: #fff;
+            width: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Comparando alterações nos arquivos - git diff</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <ul>
+                <li>Podemos verificar as alterações realizadas nos arquivos no diretórios de trabalho(Cópia local) com o comando git diff;</li>
+            </ul>
+        </div>
+        <div>
+            <h2>git diff</h2>
+            <span>
+                <ul>
+                    <li>O comando git diff revisa alterações atuais nos arquivos;</li>
+                    <li>Lembrando que git diff é o mesmo que git diff HEAD;</li>
+                </ul>
+            </span>
+            <div>
+                <div class="command">
+                    <p>git diff</p>
+                </div>     
+                <span>
+                    <p>Com git diff podemos ver o que foi adicionado ou removido nos arquivos ou seja, veremos uma versão anterior e atual do arquivo, lembrando que também podemos especificar o arquivo utilizando git diff "nomedoarquivo".</p>                    
+                </span>                   
+                <span>
+                    <p>Vale ressaltar que o comando git diff mostra apenas os arquivos que não estão na Staging area(Estado preparado), mas caso quisermos visualizar os arquivos que estão prontos para commit usamos o comando git diff --staged.</p>
+                    <div class="command">
+                        <p>git diff --staged</p>
+                    </div>
+                </span>                
+            </div>
+        </div>
+    </section>
+</body>
+</html>

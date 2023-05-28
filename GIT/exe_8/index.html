@@ -1,0 +1,75 @@
+<!-- EXERCICIO 8 - TRABALHANDO COM REPOSITÓRIOS - GIT INIT -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com repositórios - git init</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Trabalhando com repositórios - git init</h1>
+        </div>
+    </header>
+    
+    <section>
+        <div>
+            <ul>
+                <li>O comando git init inicia o repositório git;</li>                
+                <li>Podemos escolher o diretório do projeto para iniciar o repostório git;</li>
+            </ul>
+        </div>
+        <div>            
+            <div>
+                <h2>Repositório</h2>
+                <span>
+                    <ul>
+                        <li>Repositório é um local de armazenamento onde o projeto e suas alterações são mantidos;</li>
+                        <li>Na prática, é uma pasta comum no sistema para cada projeto gerenciado pelo git, um repositório é configurado;</li>
+                        <li>Sendo assim, para cada projeto novo, seguimos os seguintes passos:</li>
+                        <ol>
+                            <li>Criar um diretório para armazenar o projeto;</li>
+                            <li>Entrar no diretório(opcional);</li>
+                            <li>Inicializar o repositório git(git init);</li>
+                        </ol>                        
+                    </ul>                    
+                </span>
+            </div>
+            <div>
+                <h2>Diretórios</h2>
+                <span>
+                    <ul>
+                        <li>Após o passo a passo para gerenciamento do projeto no git, é criado um subdiretório oculto chamado .git que guardará os dados de alteração e snapshots;</li>
+                        <li>A área fora do diretório .git é o diretório de trabalho, onde ficam armazenados os arquivos que iremos manipular;</li>
+                        <li>Ou seja, é a área onde interagimos diretamente com os arquivos do projeto;</li>
+                    </ul>
+                </span>
+            </div>
+            <div>
+                <h2>Staging area</h2>
+                <span>
+                    <ul>
+                        <li>É o local para onde os arquivos vão antes de um snapshot ser criado;</li>
+                        <li>Somente os arquivos da staging area vão para um snapshot;</li>
+                        <li>Assim selecionamos os arquivos desejados no diretório de trabalho;</li>
+                    </ul>
+                </span>
+            </div>
+            <div>
+                <h2>Commits</h2>
+                <span>
+                    <ul>
+                        <li>Snapshot do projeto em um determinado momento, com informações sobre o autor do conteúdo em quem o realizou;</li>
+                        <li>O estado anterior do projeto é denominado "pai", commits são ligados entre si por conexões pai-filho, e um conjunto de commits relacionados entre si é chamado de branch(ramo);</li>
+                        <li>Um commit pode ter dois pais se for criado pela merge(mescla) de dois branches;</li>
+                        <li>Identificamos um commit pelo seu nome, que é uma string de 40 caracteres obtida pelo hash(SHA1) do commit;</li>                        
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

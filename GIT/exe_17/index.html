@@ -1,0 +1,78 @@
+<!-- EXERCICIO 17 - FUNDINDO BRANCHES - GIT MERGE -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundindo branches - git merge</title>
+    <style>
+        
+        .command{
+            background: #800080;
+            color: #fff;
+            width: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Fundindo branches - git merge</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <ul>
+                <li>Ao efetuarmos alterações nas branches do projeto, devemos fundir essas atualizações na branch principal, que é denominada com master ou main;</li>
+                <li>Chamamos esse processo de merge;</li>
+            </ul>            
+        </div>   
+        <div>
+            <div>
+                <h2>git merge</h2>
+                <span>
+                    <ul>
+                        <li>O comando git merge, fundi alterações feitas em um branch a outro;</li>
+                    </ul>
+                </span>
+                <div>
+                    <h3>Criando branch</h3>
+                    <div class="command">
+                        <p>git branch menu</p>
+                    </div>
+                    <span>
+                        <p>Podemos efetuar commits e alterações na branch menu, e ao finalizar todo o processo devemos fundir a branch menu na branch padrão chamada master ou main.</p>
+                    </span>
+                </div>
+                <div>
+                    <h3>Fundindo branch</h3>
+                    <div class="command">
+                        <p>git merge menu</p>                        
+                    </div>
+                    <span>
+                        <p>Com o exemplo anterior, as edições feitas na branch menu serão fundidas a branch master.</p>
+                    </span>
+                </div>
+            </div>            
+            <div>
+                <h2>Resolvendo conflitos</h2>
+                <span>
+                    <ul>
+                        <li>Ao trabalharmos em equipe durante o desenvolvimento de um projeto, poderá haver conflitos de implementações;</li>
+                        <li>Ou seja, cada desenvolvedor do projeto poderá fazer um merge(fundir) de recursos similares um do outro, o que acaba gerando um conflito de código;</li>
+                        <li>Com isso, o git não sabe qual commit inserir durante a realização de uma fusão com git merge;</li>
+                        <li>O git não tem um comando específico para resolução de conflitos, por isso devemos corrigir manualmente o problema e comunicando a equpe, ou utilizamos simplesmente git commit e analisamos as informações;</li>                        
+                    </ul>
+                </span>
+                <div class="command">
+                    <p>git commit</p>
+                </div>                
+            </div>
+        </div>     
+    </section>
+</body>
+</html>

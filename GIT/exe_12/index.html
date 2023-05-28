@@ -1,0 +1,76 @@
+<!-- EXERCICIO 12 - EXCLUINDO E RESTAURANDO ARQUIVOS - GIT RM E GIT CHECKOUT -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Excluindo e restaurando arquivos - git rm e git checkout</title>
+    <style>
+        
+        .command{
+            background: #800080;
+            color: #fff;
+            width: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Excluindo e restaurando arquivos - git rm e git checkout</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <ul>
+                <li>Para remover um arquivo podemos simplesmente utilizar o gerenciador de arquivos de nosso sistema operacional;</li>
+                <li>Mas é importante utilizarmos comandos dentro do git para excluir ou restaurar arquivos, pois assim podemos rastrear as informações do projeto;</li>
+                <li>Para isso usamos os comandos git rm e git checkout;</li>
+            </ul>
+        </div>
+        <div>
+            <div>
+                <h2>git rm</h2>
+                <span>
+                    <ul>
+                        <li>Este comando remove um determinado arquivo;</li>
+                    </ul>
+                </span>
+                <div class="command">
+                    <p>git rm archive1.txt</p>
+                </div>
+                <p>Para o comando git rm funcionar, primeiro devemos realizar um commit, sendo assim a exclusão do arquivo será bem sucedida.</p>
+            </div>            
+            <div>
+                <h2>git log --diff-filter=D --summary</h2>
+                <span>
+                    <ul>
+                        <li>Este comando mostra os arquivos de commit que foram deletados;</li>
+                    </ul>
+                </span>
+                <div class="command">
+                    <p>git log --diff-filter=D --summary</p>
+                </div>
+                <p>Com este comando, temos informações de arquivos que foram removidos do commit.</p>
+            </div>
+            <div>
+                <h2>git checkout</h2>
+                <span>
+                    <ul>
+                        <li>Com git checkout podemos restaurar arquivos removidos;</li>
+                        <li>Basta pegarmos o nome do commit com o comando git log --diff-filter=D --summary e informamos o nome do arquivo;</li>
+                    </ul>                    
+                </span>
+                <div class="command">
+                    <p>git checkout a10f~1 archive.txt</p>
+                </div>
+                <p>Assim podemos restaurar os arquivos excluidos de um commit, utilizando git checkout.</p>
+            </div>
+        </div>                
+    </section>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!-- EXERCICIO 19 - COMANDO GIT PUSH -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git push</title>
+    <style>
+        .command{
+            background: #800080;
+            color: #fff;
+            width: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Comando git push</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <ul>
+                <li>O comando git push é usado para enviar o conteúdo do repositório local para um repositório remoto;</li>
+                <li>Assim os arquivos do projeto armazenados no computador, ficam hospedados remotamente;</li>
+                <li>O comando push transfere commits do repositório local a um repositório remoto;</li>
+                <li>Resumindo, os arquivos ficam hospedados no GitHub, ou em outro repositório remoto;</li>
+            </ul>            
+            <div class="command">
+                <p>git push git@github.com:kesley-dev/project.git master</p>
+            </div>            
+            <span>
+                <p>Precisamos informar o endereço SSH do repositório, e a branch para qual o projeto será enviado.</p>
+            </span>
+            <span>
+                <p>Efetuando isso, os arquivos do repositório local e seus commits serão enviados para o repositório remoto do GitHub.</p>
+            </span>
+            <span>
+                <p>Sendo assim, sempre que efetuarmos alterações e commits no nosso repositório local, devemos realizar o comando git push para enviar as atualizações ao repositório do GitHub, e lembrando que temos que inserir o endereço SSH do repositório e a branch para qual será enviada as atualizações.</p>            
+            </span>
+        </div>
+        </div>
+        <div>            
+            <div>
+                <h2>Simplificando o push - git push</h2>
+                <span>
+                    <ul>
+                        <li>Ao efetuarmos o comando git push devemos informar o endereço SSH do repositório;</li>
+                        <li>Porém, podemos simplificar a operação utilizando o comando git remote;</li>
+                    </ul>
+                </span>
+                <div class="command">
+                    <p>git remote add origin git@github.com:kesley-dev/project.git</p>
+                </div>
+                <span>
+                    <p>Com isso a origin(origem) será configurada para o repositório indicado e caso quisermos visualizar com mais detalhes, usamos o comando git remov -v. Por exemplo: </p>                    
+                </span>
+                <div class="command">
+                    <p>git remote -v</p>
+                </div>
+                <span>
+                    <p>Agora que temos a origin(origem) configurada, podemos realizar o git push de forma simples ao repositório do GitHub.</p>                    
+                </span>
+                <div class="command">
+                    <p>git push origin master</p>
+                </div>
+            </div>
+            <div>
+                <h2>Colocando autor no commit</h2>
+                <span>
+                    <ul>
+                        <li>Ao efetuar um commit, podemos colocar o autor que o está realizando;</li>
+                        <li>Vale ressaltar que as informações do autor serão mostradas no GitHub;</li>
+                    </ul>
+                </span>
+                <div class="command">
+                    <p>git commit -m "Texto do H2 alterado" --author="nomedousuário &lsaquo;emaildousuário@gmail.com&rsaquo;" </p>
+                </div>
+                <span>
+                    <p>Após isso, enviamos o projeto para o repositório remoto do GitHub com o git push.</p>
+                </span>
+                <div class="command">
+                    <p>git push origin master</p>
+                </div>
+            </div>
+        </div>                
+    </section>
+</body>
+</html>
