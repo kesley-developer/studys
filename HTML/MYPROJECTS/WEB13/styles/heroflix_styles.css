@@ -1,0 +1,228 @@
+/* styles - WEB13/pages/heroflix.html, movies and series*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content-menu,
+.content-series,
+.content-movies,
+.content-about{    
+    background-attachment: scroll;
+    background-position: 60% 10%;
+
+    animation: background_animation;
+    animation-duration: 2s;
+}
+
+/* animation for background_animation*/
+
+@keyframes background_animation{
+    from{
+        background-position: 10% 1%;
+    }
+
+    to{
+        background-position: 60% 10%;
+    }
+}
+
+.content-menu{
+    background-image: url(https://wallpaperaccess.com/full/502254.jpg); 
+}
+
+.content-movies{
+    background-image: url(https://images3.alphacoders.com/148/thumb-1920-148079.jpg);
+}
+
+.content-series{
+    background-image: url(https://images7.alphacoders.com/337/thumb-1920-337745.jpeg);
+}
+
+.content-about{
+    background-image: url(https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80);
+}
+
+
+header{
+    background-color: #111;
+    
+    color: white;
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    padding: 25px;
+
+    border-bottom: 2px solid white;
+
+    animation-name: header_animation;
+    animation-duration: 5s;
+}
+
+header p{
+    margin-left: 5px;
+}
+
+.header-navegation{    
+    text-align: right;
+}
+
+.header-navegation a{
+    font-size: 18px;
+    color: white;
+
+    text-decoration: none;
+}
+
+.header-navegation a:focus,
+.header-navegation a:hover{
+    color: orange;
+}
+
+.header-navegation ul{
+    list-style: none;
+        
+    display: inline-flex;
+}
+
+.user-click{    
+    /*Centralizando DIV*/
+    width: 90vw;
+    height: 100vh;        
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;       
+
+    margin-left: 4%;
+}
+
+.user-click h2{
+    font-size: 40px;    
+    color: white;
+    
+}
+
+.user-click ul{    
+    display: flex;
+    list-style: none;    
+}
+
+.user-click li{
+    padding: 5px;
+}
+
+.acess{    
+    background-color: rgba(17, 17, 17, 0.527);
+    
+    padding: 1%;
+    border-radius: 10px;
+
+    border-right: solid 2px white;
+
+    animation-name: animation_acess;
+    animation-duration: 2s;
+}
+
+/* animation for animation_acess*/
+
+@keyframes animation_acess{
+    from{
+        opacity: 10%;
+    }
+
+    to{
+        opacity: 100%;
+    }
+
+}
+
+.button1,
+.button2{
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.button1 a,
+.button2 a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;        
+
+    border-radius: 10px;
+
+    padding: 10px;    
+}
+
+.button1 a{
+    background-color: #111;     
+}
+
+.button2 a{        
+    background-color: orange;    
+}
+
+.button1 a:focus,.button1 a:hover,
+.button2 a:hover,.button2 a:focus{
+    border-top: 5px white solid;
+}
+
+
+.acess button:focus,
+.acess button:hover{
+    border-color: white;
+}
+
+footer{
+    background-color: #111;
+        
+    color: white;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    
+    border-top: 2px solid white;
+
+    padding: 20px;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:focus,
+footer a:hover{
+    color: orange;
+}
+
+/* adjusts for mobile version*/
+
+@media screen and (max-width:768px){
+    header{
+        padding: 5px;
+    }
+
+    footer{
+        font-size: 15px;
+    }
+
+    .header-navegation{        
+        font-size: 16px;
+        text-align: center;
+        
+        padding-top: 24px;
+    }
+
+    .user-click h2{        
+        font-size: 22px;
+        padding: 5%;
+    }
+
+    .user-click{
+        margin-left: 5%;        
+    }
+}
+

@@ -1,0 +1,50 @@
+<!-- EXERCICIO 23 - INSERINDO VIDEO AO SITE -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 23</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Inserindo video ao site HTML</h1>
+        </div>
+    </header>
+
+    <section>
+        <div id="info">
+            <p>Podemos adicionar videos ao site HTML com a tag de video e informando os atributos para seu funcionamento.</p>
+        </div>
+
+        <!-- Aplicando método -->
+        <div id="add-video">
+            
+            <!-- Sem incorparação -->
+            <div class="not-incorporated">
+                <h2>Sem incorporação</h2>
+                <video width="560px" height="315px" poster="img/vid_img.png" controls>
+                    <source src="vid/my_video.mp4" type="video/mp4">
+                    
+                    <!-- Caso o video falhe ou não seja suportado pelo navegador -->
+                    Video não suportado!
+                </video>
+                
+                <p>Com este método podemos adicionar o video informando com a tag VIDEO e SOURCE</p>
+            </div>
+
+            <!-- Com incorporação -->
+            <div class="incorporated">
+                <h2>Com incorporação</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZI3GmioN0Rg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                <p>Podemos incorpar um video de uma plataforma com a tag IFRAME, mas devemos passar atributos adicionais para o seu funcionamento</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

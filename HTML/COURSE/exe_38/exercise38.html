@@ -1,0 +1,230 @@
+<!-- EXERCICIO 38 - UNIDADES DE MEDIDA CSS -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de medida CSS</title>
+    <style>
+
+        /* TABELA */
+        table{
+            border: 1px solid #111;
+            border-collapse: collapse;            
+            width: 500px;
+        }
+
+        th{
+            background: orange;
+            color: #111;
+        }
+
+        th,td{
+            border: 1px solid #111;;
+            padding: 10px;
+        }
+
+        td:nth-child(odd){
+            font-weight: bold;
+        }
+                
+        /* UNIDADES */
+        .example{            
+            background: #888;            
+            border: 2px solid #111;
+            font-size: 20px;        
+            padding: 10px;                        
+        }
+
+        #in,#cm,#mm,#pt,#pc,
+        #em,#rem,#ex,#px,#percentage,#vh,#vw,#vmin,#vmax,#ch{
+            background: orange;
+            border-right: 5px solid red;
+            margin: 10px;            
+        }
+
+        #in{            
+            width: 10in;                    
+        }
+
+        #cm{            
+            width: 10cm;            
+        }
+
+        #mm{
+            width: 10mm;
+        }
+
+        #pt{
+            width: 10pt;
+        }
+
+        #pc{
+            width: 10pc;
+        }
+
+        #em{
+            width: 10em;
+        }
+
+        #rem{
+            width: 10rem;
+        }
+
+        #ex{
+            width: 10ex;
+        }
+
+        #px{
+            width: 10px;
+        }
+
+        #percentage{
+            width: 10%;
+        }
+
+        #vh{
+            width: 10vh;
+        }
+
+        #vw{
+            width: 10vw;
+        }
+
+        #vmin{
+            width: 10vmin;
+        }
+
+        #vmax{
+            width: 10vmax;
+        }
+
+        #ch{
+            width: 10ch;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Unidades de medida CSS</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <p>Em CSS, as unidades de medida são classificadas em dois tipos: Unidades de medida absoluta e Unidades de medida relativa.</p>
+        </div>
+
+        <div class="table-1">
+            <h2>Unidades de medida absoluta</h2>
+            <p>As unidades de medida absoluta não dependem de um valor de referência e estão estreitamente ligadas as características físicas da midia para a qual se destinam.</p>
+            <div>
+                <table>
+                    <tr>
+                        <th>Abreviatura</th>
+                        <th>Unidade</th>
+                    </tr>
+                    <tr>
+                        <td>in</td>
+                        <td>Polegada</td>
+                    </tr>
+                    <tr>
+                        <td>cm</td>
+                        <td>Centímetro</td>
+                    </tr>
+                    <tr>
+                        <td>mm</td>
+                        <td>Milímetro</td>
+                    </tr>
+                    <tr>
+                        <td>pt</td>
+                        <td>Ponto. Unidade equivalente a 1/72 polegada</td>
+                    </tr>
+                    <tr>
+                        <td>pc</td>
+                        <td>Paica. Unidade tipográfica equivalente a 12pt</td>
+                    </tr>
+                </table>                
+            </div>
+        </div>
+        <div class="table-2">
+            <h2>Unidades de medida relativa</h2>
+            <p>As unidades de medida relativa tomam por base um valor definido anteriormente e não dependem das características físicas do equipamento em que serão utilizadas.</p>
+            <div>
+                <table>
+                    <tr>
+                        <th>Abreviatura</th>                            
+                        <th>Unidade</th>
+                    </tr>
+                    <tr>
+                        <td>em</td>
+                        <td>1em é igual ao tamanho de fonte definido para o elemento em questão. Se o elemento não tiver uma tamanho de fonte definido ele herda o tamanho e seu objeto-pai</td>
+                    </tr>
+                    <tr>
+                        <td>rem</td>
+                        <td>(root em) nesta unidade, 1rem é igual ao tamanho de fonte definido para o elemento raíz da página, geralmente a tag HTML</td>
+                    </tr>
+                    <tr>
+                        <td>ex</td>
+                        <td>1ex é igual a altura da letra x minúscula da fonte definida para o elemento em questão</td>
+                    </tr>
+                    <tr>
+                        <td>px</td>
+                        <td>Pixel</td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>Porcentagem. Unidade relativa ao tamanho do elemento-pai para o qual o elmento atual está definido</td>
+                    </tr>
+                    <tr>
+                        <td>vh</td>
+                        <td>A medida vh é igual a 1/100 da altura da viewport, por exemplo, se a altura do navegador é 900px, 1vh equivale a 9px</td>
+                    </tr>
+                    <tr>
+                        <td>vw</td>
+                        <td>Se a altura da viewport é 750px, 1vh equivale a 7.5px</td>
+                    </tr>
+                    <tr>
+                        <td>vmin e vmax</td>
+                        <td>vmin e vmax estão relacionados com o valor máximo e mínimo destas larguras e alturas. Por exemplo, se o navegador foi ajustado para 1100px de largura e a altura 700px, 1vmin seria 7px e 1vmax seria 11px</td>
+                    </tr>
+                    <tr>
+                        <td>ch</td>
+                        <td>Semelhante ao ex, esta unidade conta com o tamanho da fonte do elemento</td>
+                    </tr>
+                </table>
+            </div>
+        </div>        
+
+        <!-- Aplicando método -->
+        <h2>Aplicando o valor 10 na propriedade WIDHT(largura)</h2>
+        <p>Cada unidade abaixo contém o valor 10 de largura</p>
+        <div class="example">
+            <div class="absolute">
+                <div id="in">in</div>            
+                <div id="cm">cm</div>
+                <div id="mm">mm</div>
+                <div id="pt">pt</div>
+                <div id="pc">pc</div>
+            </div>
+            
+            <div class="relative">
+                <div id="em">em</div>
+                <div id="rem">rem</div>
+                <div id="ex">ex</div>
+                <div id="px">px</div>
+                <div id="percentage">%</div>
+                <div id="vh">vh</div>
+                <div id="vw">vw</div>
+                <div id="vmin">vmin</div>
+                <div id="vmax">vmax</div>
+                <div id="ch">ch</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

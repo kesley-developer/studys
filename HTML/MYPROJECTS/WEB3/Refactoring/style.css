@@ -1,0 +1,208 @@
+/* Definido a margem da página */
+* {margin:0;
+   padding: 0;
+   box-sizing: :border-box;
+}
+
+/* Estilizando a tag BODY - Corpo da página*/
+body{
+    font-family: sans-serif;
+}
+
+/* Estilizando todas as tags de LINKS */
+a{
+    transition: color 0.2s;
+}
+
+
+/* Estilizando todas as tags H2 */
+h2{
+    margin-bottom: 32px;
+    padding-left: 8px;
+    border-left: 4px solid red;
+}
+
+/* Estilizando a classe CONTAINER */
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilizando a classe DARK */
+.dark{
+    background-color: #110;
+    color: white;
+}
+
+/* Estilizando classe DARK-LINK*/
+.dark-link{
+    color:red;
+}
+
+.dark-link:hover{
+    color: white;
+}
+
+/* Estilizando a classe TEXT_CENTER */
+.text_center{
+    text-align: center;
+}
+
+/*Estilizando a tag HEADER - Cabeçalho da página*/
+header{
+    padding: 8px 24px;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    column-gap: 24px;
+}
+
+/* Estilizando a tag IMG dentro da tag HEADER*/
+header img{
+    width: 180px;
+}
+
+/* Estilizando a tag UL dentro da tag HEADER*/
+header ul{
+    list-style: none;
+
+    display: flex; 
+}
+
+/* Estilizando a tag LI( LI + LI significa se tiver uma LI depois) */
+header ul li + li{
+    margin-left: 24px;
+}
+
+/* Estilizando a tag A(LINK) */
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilização da tag a quando passar o mouse encima*/
+header a:hover{
+    color:red;
+}
+
+/* Estilização da classe HERO*/
+.hero{
+    background-image: url(../Hero/images/banner.jpg);
+    background-size: cover;
+    background-position: center 25%;
+    
+    height: 320px;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero h1{
+    color: white;
+    font-size: 36px;
+}
+
+/* Estilização da classe DOTS*/
+.dots{
+    margin-top: 24px;
+    display: flex;
+}
+
+.dots span{
+    display: block;
+    background-color: white;
+    
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.dots span + span{
+    margin-left: 10px;
+}
+
+/* Estilização da classe ACTIVE que esta dentro da classe DOTS */
+.dots .active{
+    background-color: red;
+}
+
+.gallery{
+    padding: 64px 0 96px;
+}
+
+.gallery h2{
+    color: black;
+}
+
+/* Estilização da classe GALLERY-ROW*/
+.gallery-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.gallery-row div{
+    /*flex - grow/ flex - shrink / flex - basis*/
+    flex: 1 1 250px;
+}
+
+.gallery-row img{
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.gallery p{
+    font-weight: bold;
+}
+
+/* Estilização da classe HISTORY*/
+.history{
+    padding:  92px 0 0;
+
+    border-top: 4px solid red;
+}
+
+/* Estilização da classe CONTAINER dentro da classe HISTORY*/
+.history .container{
+    max-width: 1200px;
+    
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    border-bottom: 2px solid red;
+}
+    
+
+/* Estilização da classe COLUMN que esta dentro de outras duas classes(HISTORY e CONTAINER)*/
+.history .container .column{
+    flex: 1 1 350px;
+}
+
+.history .container .column img{
+    width: 100%;
+}
+
+.history p{
+    line-height: 1.5;
+}
+
+/* Estilização da tag FOOTER - Rodapé da página*/
+footer{
+    padding: 64px 0;
+    text-align: center;
+}
+
+
+
+
+

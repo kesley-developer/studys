@@ -1,0 +1,32 @@
+/* Desktop version */
+
+.desktop-version{
+    background-color: red;    
+}
+
+/* Tablet version */
+
+/* 768 pixels foi o tamanho definido, quando a tela atingir este tamanho as mudanças definidas serão executadas*/
+
+@media screen and (max-width: 768px){
+    .tablet-version{
+        background-color: red;
+    }
+    
+    .desktop-version{
+        background-color: transparent;
+    }
+}
+
+/* Mobile version */
+
+@media screen and (max-width: 600px){
+    .mobile-version{
+        background-color: red;
+    }
+    
+    .desktop-version,
+    .tablet-version{
+        background-color: transparent;
+    }    
+}

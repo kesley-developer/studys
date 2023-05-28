@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(rgb(0, 0, 0),rgb(78, 5, 146),rgb(0, 0, 0));
+    color: white;
+}
+
+section{
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+section img{
+    width: 260px;
+    height: 320px;
+
+    border-radius: 24px;
+    
+    padding-left: 5px;
+}
+
+section h2{
+    position: absolute;
+    left: 300px;
+    
+    border-left: 5px solid orange;
+    padding-left: 12px;
+}
+
+section p{
+    font-size: 20px;
+    text-align: justify;
+
+    max-width: 500px;
+    min-width: 500px;
+
+    position: absolute;
+    top: 160px;
+    left: 310px;
+}
+
+section ul{
+    display: flex;
+    list-style: none;
+    
+    gap: 48px;
+    
+    margin-top: 24px;
+    margin-left: 480px;
+}
+
+section ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+
+    position: absolute;
+    top: 450px;
+    
+}
+
+section ul a:focus,
+section ul a:hover{
+    transition: 0.3s;
+    
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.116);
+
+    border-radius: 10%;
+}
+
+header p{
+    font-family: cursive;
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+header{
+    text-align: center;
+    
+    background-image: linear-gradient(rgb(255, 145, 0),rgba(255, 255, 255, 0));
+}
+
+header h1{
+    font-size: 48px;
+}
+
+footer{
+    background-image: linear-gradient(rgba(60, 6, 255, 0),rgb(255, 145, 0));
+    text-align: center;
+    
+    padding-top: 5%;
+    padding-bottom: 2%;
+
+    font-size: 20px; 
+    
+    position: absolute;
+    bottom: 0;  
+    width: 100%
+}
+
+footer p,a{
+    color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+footer a:focus,
+footer a:hover{
+    transition: 0.5s;
+    
+    color: black;
+}
+
+.genre ul{
+    display: block;
+    
+    position: relative;
+    right: 170px;
+    bottom: 80px;
+
+    font-size: 18px;
+    font-style: italic;
+}
+
+.classification img{
+    border-radius: 5px;
+    
+    width: 48px;
+    height: 48px;
+
+    position: relative;
+    left: 750px;
+    bottom: 130px;
+}
+
+.classification p{
+    
+    position: relative;
+    bottom: 224px;
+}
+
+.back-to-menu a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: monospace;
+
+    position: relative;
+    left: 1024px;
+    bottom: 250px;
+
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.back-to-menu a:focus,
+.back-to-menu a:hover{
+    transition: 0.3s;
+    
+    color: purple;
+    background-color: white;
+}
+
+
+
+

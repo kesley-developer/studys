@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    background-image: linear-gradient(rgb(231, 231, 231),rgb(224, 224, 224));
+    background-attachment: fixed;    
+}
+
+main{
+    /*Propriedades para definição de animação*/
+    
+    animation-duration: 1s;
+    animation-name: main_animation;
+}
+
+/* Aplicando animação - Opacidade ao iniciar página*/
+@keyframes main_animation{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 100%;
+    }
+}
+
+header{    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+    background-color: rgb(236, 29, 29);
+    color: rgb(231, 231, 231);
+    
+    padding: 36px;        
+}
+
+header nav ul{
+    float:right;
+    display: flex;
+
+    list-style: none;
+    gap:16px;
+
+}
+
+header nav ul a{
+    color: white;
+    text-decoration: none;
+}
+
+.header-subtitle{
+    overflow: hidden;
+}
+
+header p{
+    margin-left: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+        
+    animation-duration: 2s;    
+    animation-name: myanimation;        
+    animation-iteration-count: infinite;
+}
+
+/* Aplicando a animação - Deslizamento de texto para a esquerda*/
+@keyframes myanimation{
+    from{
+        opacity: 0%;
+    }
+
+    to{
+        opacity: 100%;
+    }
+}
+
+.main-image{    
+    padding-bottom: 5%;
+}
+
+.main-image img{
+    width: 450px;
+    height: 450px;
+    
+    padding-left: 10px;    
+
+    border-radius: 24px;
+}
+
+.main-image p{
+    font-size: 30px;
+    font-style: italic;
+
+    margin-left: 540px;
+
+    position: absolute;
+    top: 220px
+    
+}
+
+.main-menu{
+    padding-top: 80px;
+}
+
+footer a:hover,footer a:focus,
+header a:hover,header a:focus{
+    transition: 0.5s;
+
+    color: yellow;    
+}
+
+
+.acess a{
+    text-decoration: none;    
+    color: white;
+}
+
+.acess{    
+    opacity: 80%;
+    
+    font-size: 34px;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+    
+    background-color: rgb(236, 29, 29);
+    padding: 10px;
+    border-radius: 40%;
+    
+    position: absolute;
+    right: 90px;
+    top: 524px;
+}
+
+.acess :focus,
+.acess :hover{
+    transition: 0.1s;
+    
+    font-size: 40px;
+
+}
+
+
+
+
+
+
+
+footer{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    background-color: rgb(236, 29, 29);
+    color: rgb(231, 231, 231);
+    
+    text-align: center;
+    padding: 34px;
+}
+
+footer a{
+    color: rgb(231, 231, 231);        
+    }
+
+
+

@@ -1,0 +1,105 @@
+<!-- EXERCICIO 29 - CRIANDO TABELAS NO HTML -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando tabelas no HTML</title>
+    <style>
+        
+        /* Aplicando estilo a tabela */
+        table,th,td{
+            border: 2px solid #111;  
+            border-collapse: collapse;          
+        }
+
+        th,td{
+            padding: 5px 10px 5px 10px;
+        }
+
+        th{
+            background: orange;
+            color: #111;
+        }
+
+        /* odd - elementos pares */
+        table tr:nth-child(odd){
+            background: rgb(209, 207, 207)
+        }
+
+        /* even - elementos impares */
+        table tr:nth-child(even){
+            background: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Criando tabelas no HTML</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <p>De forma similar ao excel, podemos criar tabelas no HTML. Para declarar uma tabela utilizamos a tag TABLE e para definir o seu conteúdo usamos TH, TR e TD.</p>
+        </div>
+
+        <!-- Aplicando método -->
+        <div>
+            <h2>Tabela</h2>
+            
+            <!-- <tr> = Linha da tabela -->
+            <!-- <th> = Conteúdo do cabeçalho da tabela -->
+            <!-- <td> = Conteúdo da tabela  -->
+            <table>
+                <tr>
+                    <th>Empresa</th>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Genêro</th>
+                    
+                    <!-- colspan = Quantidade de colunas a serem ocupadas  -->
+                    <th colspan="2">Telefone</th>
+                </tr>
+                <tr>
+                    <!-- rowspan = Quantidade de linhas a serem ocupadas -->
+                    <td rowspan="2">Microsoft</td>
+                    
+                    <td>Kesley</td>
+                    <td>20</td>
+                    <td>Masculino</td>
+                    <td>(11)99991-9994</td>
+                    <td>(11)2222-3333</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>36</td>
+                    <td>Masculino</td>
+                    <td>(11)98888-8888</td>
+                    <td>(11)2444-4444</td>
+                </tr>            
+                <tr>
+                    <td rowspan="2">Apple</td>
+                    
+                    <td>Maria</td>
+                    <td>43</td>
+                    <td>Feminino</td>
+                    <td>(11)97777-7777</td>
+                    <td>(11)2555-5555</td>
+                </tr>    
+                <tr>
+                    <td>Isabella</td>
+                    <td>23</td>
+                    <td>Feminino</td>
+                    <td>(11)91111-5444</td>
+                    <td>(11)2111-1111</td>
+                </tr>
+            </table>
+        </div>
+    </section>    
+</body>
+</html>

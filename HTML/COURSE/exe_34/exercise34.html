@@ -1,0 +1,50 @@
+<!-- EXERCICIO 34 - ADICIONANDO LINK PARA WHATSAPP -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionando link para o Whatsapp</title>
+    <style>        
+        a{            
+            background: green;
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 14px;            
+            border-radius: 10px;
+
+            transition: 0.5s;
+        }
+
+        a:hover,a:focus{
+            background: #fff;
+            color: green;
+            border: 2px dotted green;
+
+            transition: 0.5s;            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Adicionando link para o Whatsapp</h1>
+        </div>        
+    </header> 
+    
+    <section>
+       <div>
+        <p>O WhatsApp é um gande meio de contato, por isso é importante adicioná-lo ao site. Com isso o usário do site sem fácil acesso ao contato.</p>
+       </div>
+       
+        <!-- Aplicando método  -->        
+        <div>
+            <!-- Passamos uma API do Whatsapp, onde deve ser informado o contato ao final -->
+            <a href="https://api.whatsapp.com/send?phone=11975474415" target="_blank">WhatsApp</a>
+        </div>
+    </section>
+</body>
+</html>

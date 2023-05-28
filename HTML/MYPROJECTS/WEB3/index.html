@@ -1,0 +1,144 @@
+<!-- PROJETO VINGADORES -->
+
+<!DOCTYPE html>
+<html lang="pt - br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avengers</title>
+    <!-- Aplicando o arquivo CSS para organizar e dar estilo as tags-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho com imagem de logo da página -->
+    <header class="dark">
+
+        <div class="container">
+            <img src="images/avengers-logo.png" alt="Logo Avengers Marvel">    
+            <img src="" alt="">
+            
+            <!-- Tag de navegação aonde estarão os link de cada parte -->
+            <nav>
+                <ul>
+                    <li><a href="#GALERIA">Galeria</a></li>
+                    <li><a href="#HISTORIA">História</a></li>
+                </ul>
+            </nav>                
+
+        </div>
+        
+
+    </header>
+
+    <!-- Menu principal da página aonde irá ter os setores -->
+    <main>
+        <!-- Setores da página, meio dela e seu conteúdo -->
+        <section class="hero"> <!-- Passando uma CLASSE aonde será usada no CSS -->
+            <h1 class="text_center">Projeto Vingadores</h1>
+            
+            <div class="dots">
+                <button class="active"></button>
+                <button></button>
+                <button></button>
+            </div>
+        </section>
+
+        <section class="gallery" id="GALERIA">
+            <div class="container">
+
+                <h2>Galeria</h2>
+                
+                <!-- Adicionando imagens que serão a página que serão estilizadas no arquivo CSS -->
+                <div class="gallery-row"> <!-- Passando uma classe onde será estilizada no CSS -->
+                    
+                    <!-- Tag FIGURE serve para adicionar e FICAPTION como legenda da imagem-->
+                    <figure>
+                        <img src="images/avengers-01.jpg" alt="Avengers img 01">
+                        <figcaption>V</figcaption>
+                    </figure>
+    
+                    
+                    <figure>
+                        <img src="images/avengers-02.jpg" alt="Avengers img 02">
+                        <figcaption>I</figcaption>
+                    </figure>
+    
+                    
+                    <figure>
+                        <img src="images/avengers-03.jpg" alt="Avengers img 03">
+                        <figcaption>N</figcaption>
+                    </figure>
+    
+                    
+                    <figure>
+                        <img src="images/avengers-04.jpg" alt="Avengers img 04">
+                        <figcaption>G</figcaption>
+                    </figure>
+    
+                    <figure>
+                        <img src="images/avengers-05.jpg" alt="Avengers img 05">
+                        <figcaption>A</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="images/avengers-06.jpg" alt="Avengers img 06">
+                        <figcaption>D</figcaption>
+                    </figure>
+      
+                    <figure>
+                        <img src="images/avengers-07.jpg" alt="Avengers img 07">
+                        <figcaption>O</figcaption>
+                    </figure>
+                    
+                    <figure>
+                        <img src="images/avengers-08.jpg" alt="Avengers img 08">
+                        <figcaption>R</figcaption>
+                    </figure>
+                    
+                    <figure>
+                        <img src="images/avengers-09.jpg" alt="Avengers img 09">
+                        <figcaption>E</figcaption>
+                    </figure>
+                    
+                    <figure>
+                        <img src="images/avengers-10.jpg" alt="Avengers img 10">
+                        <figcaption>S</figcaption>
+                    </figure>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="history dark" id="HISTORIA"> <!-- Classe history a ser estilizada no arquivo CSS  -->
+            <div class="container"> <!--Classe container a ser estilizada no arquivo CSS  -->
+                <div class="column"><!-- Classe column a ser estilizada no arquivo CSS  -->
+                    <h2>História</h2>
+                    <p>Vingadores ou Os Vingadores (The Avengers no original em inglês) são um grupo de super-heróis de história em quadrinhos publicados nos Estados Unidos pela editora Marvel Comics. O grupo também aparece em adaptações da Marvel para cinema, desenho animado e jogos eletrônicos.
+                    </p>
+        
+                    <br><p>
+                        Fonte: <a class="dark-link" href="https://pt.wikipedia.org/wiki/Vingadores" target="_blank" title="Link Externo">
+                            Wikipedia</a>
+                    </p>
+                </div>
+
+                <div class="column"><!-- Classe column -->
+                    <img src="images/vingadores-01.png" alt="Avengers Characters">
+                </div>
+        </div>
+        </section>
+    </main>
+
+    <!-- Rodapé da página que contem classes para serem estilizadas -->
+    <footer class="dark">
+        <div class="container">
+            <p class="text_center">
+                Copyright ©  2022<a class="dark-link" href="https://www.linkedin.com/in/kesley-keven-%C2%A9-18358a1bb/" target="_blank" title="Link Externo">
+                    Kesley Developer</a>  
+                                                    <!-- TITLE mostrará o titulo do link após o mouse parar encima -->
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

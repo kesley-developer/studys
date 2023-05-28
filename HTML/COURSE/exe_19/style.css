@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Elemento a ser animado*/
+
+header{
+    color: white;           
+    background-color: red;
+
+    padding: 24px;
+
+    /* Definindo nome da animação*/
+    animation-name: header_animation;
+
+    /* Definindo duração da animação*/
+    animation-duration: 5s;    
+}
+
+
+/* Passando nome da animação e oque acontecerá no elemento escolhido*/
+
+@keyframes header_animation{
+    from{
+        background-color: blue;
+    }
+
+    to{
+        background-color: red;
+    }
+}

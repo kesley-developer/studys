@@ -1,0 +1,171 @@
+/* styles - WEB13/pages/spiderflix.html*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("https://img.elo7.com.br/product/original/120F846/painel-de-festa-spiderman-festa-tematica.jpg");        
+    backface-visibility: hidden;
+    background-attachment: scroll;
+    background-repeat: no-repeat;        
+    background-position: 50%;
+
+    animation-name: body_animation;
+    animation-duration: 1s;
+}
+
+@keyframes body_animation{
+    from{
+        background-position: 100%;        
+    }
+
+    to{
+        background-position: 50%;        
+    }
+}
+
+
+header{
+    background-color: rgba(240, 116, 0, 0.753);    
+    
+    color: white;
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    padding: 20px;
+
+    border-bottom: 2px solid white;
+
+    animation-name: header_animation;
+    animation-duration: 5s;
+}
+
+header p{
+    margin-left: 5px;
+}
+
+.header-navegation{    
+    text-align: right;
+}
+
+.header-navegation a{
+    font-size: 18px;
+    color: white;
+
+    text-decoration: none;
+}
+
+.header-navegation a:focus,
+.header-navegation a:hover{
+    color: black;
+}
+
+.header-navegation ul{
+    list-style: none;
+        
+    display: inline-flex;
+}
+
+.user-click{    
+    /*Centralizando DIV*/
+    width: 90vw;
+    height: 100vh;        
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+}
+
+.user-click h2{
+    font-size: 40px;    
+    color: white;
+}
+
+.user-click ul{    
+    display: flex;
+    list-style: none;    
+}
+
+.user-click li{
+    padding: 5px;
+}
+
+.acess{
+    
+    background-color: rgba(240, 116, 0, 0.753);    
+    
+    padding: 1%;
+    border-radius: 10px;
+
+    border-right: solid 2px white;
+}
+
+button{
+    background-color: orange;
+        
+    border-radius: 15px;
+
+    margin-top: 60px;    
+    padding: 10px;
+}
+
+button a{
+    text-decoration: none;
+    
+    font-size: 20px;
+    color: black;
+}
+
+.button1 button{
+    background-color: #111;    
+}
+
+.button1 a{
+    color: white;
+}
+
+.acess button:focus,
+.acess button:hover{
+    border-color: white;
+}
+
+footer{
+    background-color: rgba(240, 116, 0, 0.753);    
+        
+    color: white;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    
+    border-top: 2px solid white;
+
+    padding: 20px;
+}
+
+footer a{
+    color: white;
+}
+
+/* adjusts for mobile version*/
+
+@media screen and (max-width:768px){
+    header{
+        padding: 5px;
+    }
+
+    footer{
+        font-size: 15px;
+    }
+
+    .header-navegation{        
+        font-size: 16px;
+        text-align: center;
+        
+        padding-top: 24px;
+    }
+}
+

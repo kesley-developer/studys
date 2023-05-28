@@ -1,0 +1,227 @@
+<!-- EXERCICIO 36 - GRID CSS -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid CSS</title>
+    <style>
+        
+        /* CONTAINER BÁSICO */
+
+        /* CLASS = container-basic */
+        .container-basic{
+            background: #111;
+            border: 2px solid red;
+            padding: 10px;
+            
+            /* Aplicando GRID */
+            display: grid;
+            
+            /* Aplicando COLUNA ao GRID e informando o tamanho de cada coluna */
+            grid-template-columns: 50px auto 10%;            
+
+            /* Definindo altura */
+            height: 35vh;
+
+            /* Aplicando LINHA ao GRID e informando o tamanho de cada linha */
+            grid-template-rows: 70% 30%;
+
+            /* Espaçamento entre cada item */
+            gap: 5px;                                  
+        }
+
+        .container-basic div{
+            background: #fff;
+            border: 1px solid blue;
+            padding: 10px;            
+        }
+
+        /* TEMPLATE AREA */
+
+        /* CLASS = template-area */
+        .template-area{
+            background: #111;
+            border: 2px solid red;
+            padding: 15px;                        
+            display: grid;                                                
+            gap: 5px;                                  
+
+            /* Pegando elementos por ID e definindo a área de cada elemento FILHO do GRID */
+            grid-template-areas:
+                "header header header" /* header - Cabeçalho da página */
+                "sidebar content content" /* sidebar e content - Barra de navegação e conteúdo da página */
+                "footer footer footer" /* Footer - Rodapé da página */
+        }
+
+        .template-area div{
+            background: #fff;
+            border: 1px solid blue;
+            padding: 10px;
+        }
+
+        /* Aplicando GRID-AREA e nomeando para funcionamento do GRID-TEMPLATE-AREAS ↑ */
+        #header{
+            grid-area: header;
+        }
+
+        #sidebar{
+            grid-area: sidebar;
+            height: 40vh;
+        }
+
+        #content{
+            grid-area: content;
+            height: 40vh;
+        }
+
+        #footer{
+            grid-area: footer;
+        }
+
+        /* ALINHAMENTO */
+        
+        /* CLASS = grid-align */
+        .grid-align{
+            background: #111;
+            border: 2px solid red;
+            padding: 10px;                        
+            display: grid;                                                                   
+            grid-template-columns: auto auto auto;
+            height: 30vh;
+            
+            /* Alinhamento no eixo X(Horizontal) */
+            justify-content: center;
+
+            /* Alinhamento no eixo Y(Vertical) */
+            align-items: center;
+        }
+
+        .grid-align div{
+            background: #fff;
+            border: 1px solid blue;
+            padding: 10px;            
+        }
+
+        /* ITENS INDIVIDUAIS */
+        
+        /* CLASS = grid-individual */
+        .grid-individual{
+            background: #111;
+            border: 2px solid red;
+            padding: 10px;                        
+            display: grid;                        
+            grid-template-columns: auto auto auto;                                                      
+        }
+
+        .grid-individual div{
+            background: #fff;
+            border: 1px solid blue;
+            padding: 20px;            
+        }
+
+        #item-1{
+            /* Posição inicial da coluna */
+            grid-column-start: 1;
+
+            /* Posição final da coluna */
+            grid-column-end: 4;
+        }
+
+        #item-2{
+            /* Posição inicial da linha */
+            grid-row-start: 2;
+            
+            /* Posição final da linha */
+            grid-row-end: 4;
+        }
+
+        #item-3{
+            /* Posicionamento horizontal */
+            justify-self: end;
+            height: 100px;
+        }
+
+        #item-4{
+            /* Posicionamento vertical */
+            align-self: center ;                        
+        }
+
+        #item-5{
+            justify-self: start;
+            height: 200px;
+        }
+
+        #item-6{
+            align-self: end;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Grid CSS</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <p>Grid é um recurso do CSS que permite desenvolver layouts em grid, e ele é um valor da propriedade display do CSS. É utilizado em containers que contém itens e este container controla a disposição dos itens, mas os itens também podem alterar o seu posicionamento. Os grids são divididos em colunas e linhas. Lembrando que podemos inserir um espaçamento entre as áreas com recurso de GAP.</p>
+        </div>
+
+        <!-- Aplicando método -->
+
+        <!-- Container básico - Elemento PAI e seus FILHOS -->
+        <h2>Container Básico - Container simples</h2>
+        <div class="container-basic">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+        <!-- Template areas - Conteúdo geral de uma página -->
+        <h2>Template areas - Conteúdo geral de uma página</h2>
+        <div class="template-area">
+            <div id="header">
+                <p>Cabeçalho</p>
+            </div>
+            <div id="sidebar">
+                <p>Sidebar</p>
+            </div>
+            <div id="content">
+                <p>Conteúdo</p>
+            </div>
+            <div id="footer">
+                <p>Rodapé</p>
+            </div>
+        </div>
+
+        <!-- Alinhamento -->
+        <h2>Alinhamento - Alinhando itens pelo grid</h2>
+        <div class="grid-align">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+        <!-- Itens individuais - Comportamento de cada item FILHO -->
+        <h2>Itens individuais - Comportamento individual</h2>
+        <div class="grid-individual">
+            <div id="item-1">1</div>
+            <div id="item-2">2</div>
+            <div id="item-3">3</div>
+            <div id="item-4">4</div>
+            <div id="item-5">5</div>
+            <div id="item-6">6</div>
+        </div>
+    </section>
+</body>
+</html>

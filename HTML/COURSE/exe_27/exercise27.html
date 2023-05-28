@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionando ícones aos inputs</title>
+    <style>
+        
+        /* Definindo propriedades de estilo do CONTAINER para dentro do INPUT */
+        span{
+            padding: 10px;
+            margin-left: -30px;
+        }
+
+        /* Caso o input seja inválido, adicionamos "✖" dentro do container SPAN */
+        input:invalid + span::before{
+            color: red;
+            content: "✖";
+        }
+
+        /* Caso válido, adicionamos "✓" */
+        input:valid + span::before{
+            color: green;
+            content: "✓"
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Adicionando ícones aos inputs</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <p>Caso necessário, podemos adicionar ícones aos inputs;</p>
+        </div>
+
+        <!-- Aplicando método -->
+        <div class="form">
+            <form>
+                <label for="#name">Nome</label>
+                <input id="name" type="text" required maxlength="10" minlength="3">
+
+                <!-- Container SPAN, local onde será adicionado o ícone -->
+                <span></span>   
+                <button>Enviar</button>             
+            </form>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!-- EXERCICIO 26 - VALIDAÇÃO DE CAMPOS EM FORMULÁRIOS HTML -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de campos em formulários HTML</title>
+    <style>        
+
+        /* Caso o campo do input seja inválido */        
+        input:invalid{
+            border-color: red;
+        }
+
+        /* Caso seja válido */
+        input:valid{
+            border-color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Validação de campos em formulários HTML</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <p>Podemos válidar formulários no HTML, assim temos a possibilidade de determinar a quantidade de caractéres máximos ou minímos no input do formulário;</p>            
+        </div>
+
+        <!-- Aplicando método -->
+        <div id="form">
+            <form action="">
+                <label for="#name">Nome</label>
+                
+                <!-- Quantidade de caractéres máximos e minímos requeridos ou permitidos -->
+                <input id="name" type="text" required maxlength="10" minlength="5"> 
+                <label for="#message">Mensagem</label>
+                <input id="message" type="text">
+                <button>Enviar</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

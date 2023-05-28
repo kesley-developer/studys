@@ -1,0 +1,99 @@
+<!-- EXERCICIO 33 - CRIANDO MENU LATERAL -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando menu lateral</title>
+    <style>
+        
+        body{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+
+        
+        /* Estilizando as tags HEADER e NAV e seus elementos*/
+        a{
+            text-decoration: none;
+        }
+
+        header{
+            background: purple;
+            padding: 10px;
+        }        
+
+        #open{
+            color: #fff;
+            font-size: 25px;
+        }        
+                
+        nav{
+            background: purple;
+            height: 100%;
+            width: 0px;            
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;         
+            overflow: hidden; /*  Escondendo elemento ao ultrapassar limite do tamanho */   
+            transition: width 0.3s; /* Transição para quando a propriedade WIDTH for alterada */
+        }
+
+        nav a{
+            color: #fff;
+            font-size: 25px;
+            display: block;
+            padding: 15px 10px 15px 30px;
+        }
+        
+        nav a:hover,nav a:focus{            
+            background: #fff;
+            color: purple;
+        }
+
+        /* Estilizando conteúdo da página */
+        main{
+            padding: 10px;
+            transition: margin-left 0.5s; /* Transição para quando a propriedade MARGIN-LEFT for alterada */
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Aplicando método -->
+    <header>
+        
+        <!-- onclick - Ao clicar neste elemento tal ação deve ser feita -->
+        <a href="#" id="open" onclick="menuOpen()">Abrir</a>                       
+    </header>
+    <nav id="menu">
+        <a href="#" id="close" onclick="menuClose()">Fechar</a>
+        <a href="#">Sobre</a>
+        <a href="#">Home</a>
+    </nav>
+    <main id="content">
+        <h1>Criando menu lateral</h1>
+        <p>Caso quisermos desenvolver um menu latera para o site, podemos cria-lo utilizando HTML, CSS e JAVASCRIPT. Lembrando que utilizamos a tag NAV quando for uma área de navegação do site.</p>
+    </main>    
+    
+    <!-- Utilizando JAVASCRIPT -->
+    <script>
+        
+        /* Criando função para ser usada no atributo ONCLICK */
+        function menuOpen(){
+            
+            /* Pegando elemento pela sua ID */
+            document.getElementById("menu").style.width = "250px";     
+            document.getElementById("content").style.marginLeft = "250px";
+        }
+
+        function menuClose(){
+            document.getElementById("menu").style.width = "0px";
+            document.getElementById("content").style.marginLeft = "0px";
+        }
+    </script>
+</body>
+</html>

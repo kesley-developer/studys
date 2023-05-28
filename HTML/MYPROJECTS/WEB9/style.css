@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: bisque;
+}
+
+header{
+    background-image: linear-gradient(rgb(235, 138, 12),rgb(224, 135, 1),rgb(180, 103, 3));
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    
+    position: fixed;
+    padding: 15px 5px;
+
+    width: 100%;
+}
+
+header p{
+    font-size: 12px;
+    padding: 0 0 0 55px;
+}
+
+header h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 48px;
+}
+
+header,ul{
+    display: flex;
+
+    justify-content: space-between;
+}
+
+header ul{
+    list-style: none;
+
+    gap: 8px;
+    padding: 35px 30px
+}
+
+main section div img{
+    width: 400px;
+    border-radius: 200%;
+    padding: 50px 24px;
+}
+
+section{
+    font-size: 24px;
+}
+
+footer{
+    background-image: linear-gradient(rgb(235, 138, 12),rgb(224, 135, 1),rgb(180, 103, 3));
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+
+    padding: 34px 5px;
+}
+
+footer p,a{
+    text-align: center;
+    color: white ;
+}
+
+section div{
+    padding: 120px 60px 48px 3px;
+}
+
+.index div h2{
+    border-left: 8px solid orange;
+    padding: 0 0 0 10px;
+}
+
+section p{
+    text-align: justify;
+}
+
+
+.info{
+    padding: 300px;
+}
+
+.info h2{
+    border-left: 8px solid orange;
+    padding: 0 0 0 10px;
+}
+
+.info p{
+    padding-top: 24px;
+}
+
+.man img{
+    width: 150px;
+}
+
+.woman img{
+    width: 220px;
+}
+
+.info ul{
+    list-style: none;
+}
+
+

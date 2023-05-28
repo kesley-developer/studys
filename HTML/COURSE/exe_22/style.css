@@ -1,0 +1,17 @@
+
+.atr-infos{
+    background: #111;
+    color: #fff;
+    font-size: 18px;
+
+    margin-left: 30px;
+
+    border-radius: 6px;    
+    border-right: 10px solid orangered;
+
+    width: 600px;        
+}
+
+.atr-infos h4{
+    margin-left: 10px;
+}

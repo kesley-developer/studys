@@ -1,0 +1,210 @@
+/* styles - WEB13/pages/login*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;        
+}
+
+.content-login{
+    background-image: url(https://wallpaperbat.com/img/288302-movie-posters-wallpaper.jpg);            
+}
+
+header{
+    color: white;
+    background-color: #111;
+
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    padding: 25px;        
+
+    border-bottom: 2px solid white;
+}
+
+header p{
+    padding-left: 5px;
+}
+
+.header-navegation{    
+    text-align: right;
+}
+
+.header-navegation a{
+    font-size: 18px;
+    color: white;
+
+    text-decoration: none;
+}
+
+.header-navegation a:focus,
+.header-navegation a:hover{
+    color: orange;
+}
+
+.header-navegation ul{
+    list-style: none;
+
+    display: inline-flex;
+}
+
+.content-login section{
+    padding-top: 50px;    
+    padding-bottom: 50px;
+}
+
+input:focus,
+input:hover{
+    background-color: orange;
+}
+
+.user-input{
+    color: white;
+
+    background-color: rgba(17, 17, 17, 0.527);
+
+    animation-name: login_animation;
+    animation-duration: 2s;
+}
+
+/* animation for login*/
+
+@keyframes login_animation{
+    from{
+        opacity: 10%;
+    }
+
+    to{        
+        opacity: 100%;
+    }
+}
+
+.user-input h2{    
+    font-size: 48px;
+
+    text-align: center;
+    
+    padding-bottom: 48px;            
+}
+
+.user-input ul{
+    text-align: center;
+}
+
+.user-input li{
+    padding: 10px;
+    margin-top: 10px;    
+}
+
+.user-input input{
+    font: bold;
+
+    border-radius: 24px;
+    padding: 5px;    
+}
+
+.login p{
+    font:bold;
+}
+
+.user-account{
+    text-align: center;    
+    
+}
+
+.user-account a{
+    color: orange;
+}
+
+.user-account a:focus,
+.user-account a:hover{
+    color: white;
+}
+
+.login-button{
+    padding-top: 25px;
+    
+}
+
+.login-button a{
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    
+    background-color: orange;    
+
+    border-bottom-left-radius: 10px;    
+    border-top-right-radius: 10px;
+
+    margin-left: 54%;
+    margin-top: 24px;
+    padding: 5px;    
+}
+
+.login-button a:focus,
+.login-button a:hover{
+    transition: 0.5s;
+
+    background-color: white;        
+
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.recuperation-information p{
+    text-align: center;
+
+    margin-bottom: 40px;
+    
+}
+
+footer{
+    font-size: 18px;
+    text-align: center;    
+    color: white;
+    
+    background-color: #111;
+
+    padding: 30px;    
+
+    border-top: 2px solid white;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:focus,
+footer a:hover{
+    color: orange;
+}
+
+/* adjusts for mobile version*/
+
+@media screen and (max-width:768px){
+    header{
+        padding: 5px;
+    }
+
+    footer{
+        font-size: 15px;        
+    }
+
+    .header-navegation{        
+        font-size: 16px;
+        text-align: center;
+        
+        padding-top: 24px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

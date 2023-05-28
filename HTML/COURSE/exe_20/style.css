@@ -1,0 +1,56 @@
+button{
+    background-color: cornflowerblue;    
+
+    padding: 5px 8px;
+    
+    border: 0;   
+    border-radius: 2px;
+}
+
+/* Aplicando as Pseudo-classes */
+
+/*
+:hover - Quando o mouse for posicionado sobre o elemento
+:focus - Permite saber quando um elemento do site está selecionado(focado)
+:disabled - Desabilita o elemento
+:not() - Impede que a estilização funcione para tal Pseudo-classe
+:first-child - Pega o primeiro elemento de uma <div> ou <span>
+:last-child - Pega o ultimo elemento de uma <div> ou <span>
+nth-child - Pega o elemento no parágrafo indicado
+*/
+
+/* :hover, :focus & :not()*/
+button:hover:not(:disabled),
+button:focus{
+    color: white;
+    background-color: blue;
+
+    /* Tipo de ponteiro do cursor ao passar sobre o elemento */
+    cursor: pointer;
+    
+    /* Modificando as linhas das bordas laterais*/
+    outline: 2px solid blue;
+
+    /* Espaçamento das linhas laterais da borda */
+    outline-offset: 1px;    
+}
+
+/* :disabled*/
+button:disabled{        
+    background-color: rgba(97, 95, 95, 0.39);        
+}
+
+/* :first-child*/
+li:first-child{    
+    background-color: rgba(219, 18, 18, 0.986);
+}
+
+/* :last-child*/
+li:last-child{
+    background-color: rgb(241, 197, 0);
+}
+
+/* :nth-child()*/
+li:nth-child(2){    
+    background-color: rgba(37, 90, 238, 0.582);
+}

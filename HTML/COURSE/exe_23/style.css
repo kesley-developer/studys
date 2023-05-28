@@ -1,0 +1,16 @@
+
+.not-incorporated,
+.incorporated{
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    
+    border-left: 10px solid blue;
+    border-right: 10px solid blue;    
+    border-radius: 10px;    
+    
+    padding: 21px;
+}
+
+
+

@@ -1,0 +1,117 @@
+*{
+    color: white;
+    background-color: green;    
+    margin: 0;
+    padding: 0;
+}
+
+header h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header p{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 55%;
+  
+}
+
+section{
+    padding: 5%;
+    margin: 3%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.nature{
+    padding-top: 5%;
+}
+
+.today{
+    padding-top: 10%;
+}
+
+.part{
+    padding-top: 10%;
+}
+
+.nature p{
+    padding-top: 3%;
+    font-size:large;
+}
+
+.today p{
+    padding-top: 3%;
+    font-size: large;
+}
+
+.part p{
+    padding-top: 3%;
+    font-size: large;
+}
+
+h2{
+    border-left: 5px solid yellow;
+    padding-left: 1%;
+}
+
+section div ul{
+    padding-top: 3%;
+    padding-left: 3%;
+}
+
+.paper{
+    padding-top: 5%;
+}
+
+.paper div h1{
+    padding-top: 10%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 56px;
+}
+
+/*Centralizando imagem*/
+.paper div img{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer{
+    text-align: center;
+    margin-bottom: 5%;
+    padding-top: 5%;
+}
+
+footer p a:hover{
+    color: yellow;
+    transition: 0.1s;
+}
+
+header a h3{
+    padding-top: 2%;
+    font-size: 20px;
+    text-align: center;
+}
+
+header a h3:hover{
+    background-color: yellow;
+    font-size: 40px;
+    color: black;
+    transition: 1s;
+}
+header a{
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+
+
+

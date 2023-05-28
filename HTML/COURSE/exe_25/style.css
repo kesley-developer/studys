@@ -1,0 +1,26 @@
+.my-container{
+    background: #fff;
+    border: 5px solid blue;
+    padding: 15px;
+    max-width: 300px;
+    height: 300px;
+
+    /* Aplicando o FLEX */
+    display: flex; 
+    
+    /* Alinhamento horizontal */
+    justify-content: space-between;  
+
+    /* Alinhamento vertical */
+    align-items: center;
+
+    /* Jogar itens para próxima linha caso atinga o limite */
+    flex-wrap: wrap;
+}
+
+.item{
+    background: #ccc;
+    border: 2px solid red;    
+    height: 50px;
+    width: 50px;
+}

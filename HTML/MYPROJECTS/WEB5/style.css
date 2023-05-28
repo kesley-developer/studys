@@ -1,0 +1,49 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    color: wheat;
+}
+
+body{
+    background-color: brown;
+    padding: 5%;
+}
+
+header{
+    text-align: center;
+}
+
+header img{
+    width: 120px;
+}
+
+.Popular{
+    padding-top: 5%;
+    text-align: center;
+}
+
+.NoPopular{
+    padding-top: 5%;
+    text-align: center;
+}
+
+footer p{
+    color: black ;
+    background-color: wheat;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+footer a{
+    color: black;
+}
+
+footer a:hover{
+    color: brown;
+    transition: 0.5s;
+}
+
+footer img{
+    width: 20px;
+}

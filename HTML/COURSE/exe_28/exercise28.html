@@ -1,0 +1,49 @@
+<!-- EXERCICIO 28 - ENVIANDO EMAIL PELO FORMULÁRIO -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviando email pelo formulário</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Enviando email pelo formulário</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <p>A ação principal do formulário, é encaminhar os dados contidos nos inputs para um servidor que fará o processamento das informações. Estas informações podem ser salvas em um banco de dados, mas também podemos ter um retorno pelo email.</p>
+        </div>
+
+        <!-- Aplicando método -->
+        <div>
+            <!-- action = API ou servidor para envio das informações -->
+            <!-- method = O que deve ser feito com a informações -->
+            <form action="https://api.staticforms.xyz/submit" method="post">
+                
+                <!-- Chave de acesso em VALUE-->
+                <input type="hidden" name="accessKey" value="4252981e-def0-4cae-a0da-70a4d4071a8f">
+                
+                <!-- Após envio das informações acontecerá o retorno a determinada página em VALUE -->
+                <input type="hidden" name="redirectTo" value="">
+                
+                <label for="#name">Nome</label>                
+                <input id="name" name="name" type="text">
+
+                <label for="#email">Endereço de email</label>
+                <input id="email" name="email" type="email">
+
+                <label for="#message">Mensagem</label>
+                <textarea name="message" id="message" cols="20" rows="5"></textarea>                
+
+                <button>Enviar</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

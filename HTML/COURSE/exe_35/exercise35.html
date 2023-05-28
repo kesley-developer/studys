@@ -1,0 +1,218 @@
+<!-- EXERCICIO 35 - COMPONENTES DE FORMULÁRIO -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes de formulário</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Componenetes de formulário</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <p>Os formulários recebem informações digitadas pelo usuário, e dependendo do tipo de informação a ser recebida, precisamos adicionar um componente correto para esse formulário. Alguns desses componentes são: Caixas de texto, TextArea, CheckBox, Password, Radio Button, Date e Time, Number e Range, Select e DataList.</p>
+        </div>
+        
+        <!-- Aplicando método -->
+        <form action="">
+            <div class="formulary">
+                
+                <!-- Caixas de texto -->
+                <div>
+                    <!-- fieldset - Agrupador do formulário -->
+                    <fieldset>
+                        <!-- legend - Legenda ou titlo do formulário -->
+                        <legend>Caixas de texto</legend> 
+                        <div class="content-1">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name">
+                        </div>
+                        <div class="content-2">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email">
+                        </div>
+                    </fieldset>
+                </div>
+                
+                <!-- TextArea -->
+                <div>
+                    <fieldset>
+                        <legend>TextArea</legend>
+                        <div class="content-1">
+                            <label for="description">Descrição:</label>
+                            <textarea name="descricao" id="description" cols="40" rows="5"></textarea>                            
+                        </div>
+                    </fieldset>
+                </div>
+                
+                <!-- CheckBox -->
+                <div>
+                    <fieldset>
+                        <legend>CheckBox</legend>
+                        <div class="content-1">
+                            <label for="checkCar">Carro</label>
+                            <input type="checkbox" name="vehicle" id="checkCar" value="car">
+                        </div>
+                        <div class="content-2">
+                            <label for="checkBike">Bicicleta</label>
+                            <input type="checkbox" name="vehicle" id="checkBike" value="bike">
+                        </div>                        
+                    </fieldset>
+                </div>
+                
+                <!-- Password -->
+                <div>
+                    <fieldset>
+                        <legend>Password</legend>
+                        <div class="content-1">
+                            <label for="password">Senha:</label>
+                            <input type="password" id="password">
+                        </div>
+                        <div class="content-2">
+                            <!-- onchange - Ao ter mudança no elemento(marcar ou desmarcar)  -->
+                            <label for="checkPassword">Mostrar Senha</label>
+                            <input type="checkbox" id="checkPassword" onchange="viewPassword()">
+                        </div>
+                    </fieldset>
+                </div>
+                
+                <!-- Radio button -->
+                <div>
+                    <fieldset>
+                        <legend>Radio button</legend>                        
+                        <div class="content-1">
+                            <!-- name - Nos permite marcar apenas uma opção caso tenha o mesmo nome -->
+                            <!-- value - Valor do elemento -->
+                            <input type="radio" id="option1" name="options" value="Azul">
+                            <label for="option1">Opção 1</label>                            
+                        </div>
+                        <div class="content-2">
+                            <input type="radio" id="option2" name="options" value="Amarelo">
+                            <label for="option2">Opção 2</label>                            
+                        </div>
+                        <div class="content-3">
+                            <input type="radio" id="option3" name="options" value="Vermelho">
+                            <label for="option3">Opção 3</label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- Date e Time -->
+                <div>
+                    <fieldset>
+                        <legend>Date e Time</legend>
+                        <div class="content-1">                            
+                            <label for="day">Data: </label>
+                            <!-- min - Data mínima -->
+                            <!-- max - Data máxima -->
+                            <input type="date" id="day" min="2022-10-04" max="2023-01-10">
+                        </div>
+                        <div class="content-2">
+                            <label for="hour">Hora: </label>
+                            <input type="time" id="hour">
+                        </div>
+                        <div class="content-3">
+                            <label for="day-and-hour">Data e Hora: </label>
+                            <input type="datetime-local" id="day-and-hour">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- Number e Range -->
+                <div>
+                    <fieldset>
+                        <legend>Number e Range</legend>
+                        <div class="content-1">
+                            <label for="age">Idade: </label>
+                            <!-- step - Define a quantidade atribuida a cada clique -->
+                            <!-- min - Valor mínimo aceito -->
+                            <!-- max - Valor máximo aceito -->
+                            <input type="number" id="age" step="5" min="0" max="20">
+                        </div>
+                        <div class="content-2">
+                            <label for="volume">Volume: </label>
+                            <!-- oninput - Quando o compontente do INPUT for alterado seu valor será mostrado na saída OUTPUT -->                            
+                            <input type="range" id="volume" min="0" max="20" oninput="outVolume.value = volume.value">
+                            
+                            <!-- output - Saída do input onde será usado o seu ID-->
+                            <output id="outVolume"></output>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- Select e DataList -->
+                <div>
+                    <fieldset>
+                        <legend>Select e DataList</legend>
+                        <div class="content-1">
+                            <label for="selectBasic">Select Básico: </label>
+                            <!-- select - Elemento de seleção -->                            
+                            <select id="selectBasic" name="basico">                                                                
+                                <!-- option - Elemento de opções do SELECT -->
+                                <!-- value - Valor do elemento -->
+                                <option value="1">Opção 01</option>
+                                <option value="2">Opção 02</option>
+                                <option value="3">Opção 03</option>                                
+                                <option value="4">Opção 04</option>
+                            </select>
+                        </div>                        
+                        <div class="content-2">
+                            <label for="selectGroup">Select Agrupado: </label>
+                            <select id="selectGroup" name="group">
+                                <!-- optgroup - Elemento de grupo de opções -->
+                                <!-- label - Titulo do grupo -->
+                                <optgroup label="Grupo 01">
+                                    <option value="1">Opção 01</option>
+                                    <option value="2">Opçãp 02</option>
+                                </optgroup>
+                                <optgroup label="Grupo 02">
+                                    <option value="3">Opção 03</option>
+                                    <option value="4">Opção 04</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="content-3">
+                            <label for="txtList">DataList: </label>
+                            <!-- list - Ligação do elemento INPUT ao DATALIST através do ID-->
+                            <input type="text" id="txtList" name="list" placeholder="Escolha a opção" list="list">
+                            <!-- datalist - Elemento de opções recomendadas ao INPUT -->
+                            <datalist id="list">
+                                <option value="1">Opção 01</option>
+                                <option value="2">Opção 02</option>
+                                <option value="3">Opção 03</option>
+                            </datalist>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </form>
+
+        <!-- Aplicando JAVASCRIPT -->
+        <script>
+                        
+            // PASSWORD - Criando função para mostrar SENHA 
+            function viewPassword(){
+                
+                // Selecionando elementos 
+                let checkBox = document.querySelector("#checkPassword");
+                let password = document.querySelector("#password");
+
+                // Ao marcar o CHECKBOX alteramos a propriedade TYPE do INPUT
+                if(checkBox.checked == true){
+                    password.type = "text";
+                
+                // Ao desmarcar
+                }else{
+                    password.type = "password";
+                }
+            }   
+        </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{    
+    /* Deixando a rolagem após clique em algum link suave*/
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+    padding-bottom: 100px;
+}
+
+header,ul{
+    /* Propriedade para deixar o elemento no display flutuante*/
+    display: flex;
+    
+    /* Propriedade para alinhar o elemento*/
+    align-items: center;
+
+    /* Alinhar o elemento na lateral da página*/
+    justify-content: space-between;
+}
+
+header{
+    /* Espaçamento do elemento na página 8px no topo e 24px na direita*/
+    padding: 8px 24px;
+    
+    /* Espaço definido para afastamento*/
+    gap: 48px;
+    
+    /* Mantendo o HEADER(CABEÇALHO) fixo na página*/
+    position: fixed;
+    width: 100%;
+
+    z-index: 1;
+}
+
+header ul{
+    gap: 16px;
+    
+    /* Definir o estilo da lista*/
+    list-style: none;
+}
+
+header nav a{
+    color: yellow;
+}
+
+section{
+    padding: 80px 24px 0;
+
+    gap: 24px;
+    display: flex;
+    align-items: flex-start;
+}
+
+section h2{    
+    min-width: 120px;
+
+    position: sticky;
+    top: 75px;
+}
+
+header,footer{
+    background-color: blue;
+    color: yellow;
+}
+
+footer{
+    padding: 20px 24px;
+    
+    /* Definindo uma posição relativa para o FOOTER(RODAPÉ) da página*/
+    position: relative;
+}
+
+footer p{
+    text-align: center;
+}
+
+footer a{
+    color: white;
+    background-color: #110;
+
+    text-decoration: none;
+
+    padding: 6px 14px;
+    
+    /* Definindo uma posição absoluta para o link dentro do footer*/
+    position: absolute;
+    
+    /* Posição no topo*/
+    top: -45px;
+    
+    /* Posição na direita*/
+    right: 24px;
+
+
+}
+
+
+

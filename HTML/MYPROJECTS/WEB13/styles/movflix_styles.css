@@ -1,0 +1,107 @@
+/* styles - WEB13/pages/movflix.html*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("https://img.elo7.com.br/product/original/120F846/painel-de-festa-spiderman-festa-tematica.jpg");        
+    backface-visibility: hidden;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    
+    
+}
+
+header{
+    background-color: rgba(8, 4, 4, 0.521);    
+    
+    color: white;
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    padding: 20px;
+}
+
+.user-click{    
+    /*Centralizando DIV*/
+    width: 90vw;
+    height: 100vh;        
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+}
+
+.user-click h2{
+    font-size: 40px;    
+    color: white;
+}
+
+.user-click ul{    
+    display: flex;
+    list-style: none;    
+}
+
+.user-click li{
+    padding: 5px;
+}
+
+.acess{
+    
+    
+
+    background-color: rgba(8, 4, 4, 0.521);
+    
+    padding: 1%;
+    border-radius: 10px;
+
+}
+
+button{
+    background-color: orange;
+        
+    border-radius: 15px;
+
+    margin-top: 60px;    
+    padding: 10px;
+}
+
+button a{
+    text-decoration: none;
+    
+    font-size: 20px;
+    color: black;
+}
+
+.button1 button{
+    background-color: #111;    
+}
+
+.button1 a{
+    color: white;
+}
+
+.acess button:focus,
+.acess button:hover{
+    border-color: white;
+}
+
+footer{
+    background-color: rgba(8, 4, 4, 0.521);
+    
+    color: white;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    
+    padding: 20px;
+}
+
+footer a{
+    color: white;
+}
+

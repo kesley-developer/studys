@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;        
+}
+
+body{
+    background-color: #111;
+    background-attachment: fixed;
+
+    color: white;
+}
+
+header{
+    background-image: linear-gradient(rgb(250, 138, 10),rgb(223, 135, 2));
+
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    padding: 20px;
+    
+}
+
+section{
+    padding-top: 130px;
+}
+
+input:focus,
+input:hover{
+    background-color: orange;
+}
+
+.user-input h2{    
+    font-size: 48px;
+    text-align: center;
+    
+    padding-bottom: 48px;            
+}
+
+.user-input ul{
+    text-align: center;
+}
+
+.user-input li{
+    padding: 10px;
+    margin-top: 10px;    
+}
+
+.user-input input{
+    font: bold;
+
+    border-radius: 24px;
+    padding: 5px;    
+}
+
+.login p{
+    font:bold;
+}
+
+.new-account a{
+    color: orange;
+}
+
+.new-account a:focus,
+.new-account a:hover{
+    color: white;
+}
+
+button a{
+    text-decoration: none;
+    color: black;
+}
+
+button{
+    font-size: 24px;
+    color: black;
+    background-color: orange;
+    
+    margin-left: 54%;
+
+    border-bottom-left-radius: 10px;    
+    border-top-right-radius: 10px;
+
+    margin-top: 24px;
+    padding: 5px;    
+}
+
+button:focus,
+button:hover{
+    transition: 0.5s;
+
+    background-color: white;        
+
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+
+
+
+
+
+
+footer{
+    font-size: 18px;
+    text-align: center;    
+    
+    background-image: linear-gradient(rgb(250, 138, 10),rgb(223, 135, 2));    
+
+    padding: 20px;
+
+    margin-top: 80px;
+}
+
+footer a{
+    color: white;    
+}
+
+footer a:focus,
+footer a:hover{
+    color: black;
+}
+
+
+
+
+
