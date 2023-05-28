@@ -1,0 +1,124 @@
+
+*{
+    margin: 0;
+    padding: 0;                  
+}
+
+body{                            
+    background: #111;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    border-top: 25px solid #222; border-bottom: 10px solid #222;    
+    overflow: hidden;
+}
+
+
+/* CALCULATOR */
+.personalization{
+    background: rgba(17, 17, 17, 0.37);    
+    color: #fff;    
+    display: block;     
+    padding: 10px 0 10px 0;        
+}
+
+.personalization h2{
+    padding-bottom: 10px;    
+}
+
+.personalization label{        
+    font-size: 15px;    
+}
+
+.personalization input{                
+    margin: 5px 5px 10px 10px;            
+}
+
+.title{                    
+    font-variant: small-caps;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.calculator{                       
+    border-radius: 10px 10px 30px 30px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 30px; 
+    padding: 20px 10px;    
+}
+
+.display{
+    padding: 5px;
+}
+
+.display input{
+    background: linear-gradient(rgb(15, 44, 7),rgb(17, 73, 29),rgb(15,44,7));    
+    color: #fff;    
+    font-size: 15px;        
+    width: 250px;
+    height: 40px;
+}
+
+#btn-clear{
+    background: rgb(168,8,8);  
+}
+
+#btn-delete{
+    background: rgb(168, 8, 8);        
+}
+
+#parentheses,
+#btn-result{
+    background: rgb(13, 143, 218);    
+}
+
+button{    
+    transition: 0.2s;    
+    border-radius: 5px;
+    border: 1px groove #fff;    
+    color: #fff;
+    font-size: 13px;
+    width: 60px;        
+    padding: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    transition: 0.2s;        
+    opacity: 70%;    
+}
+
+/* FOOTER */
+.footer{                                                                            
+    background: rgba(17, 17, 17, 0.37);
+    color: #fff;
+    font-size: 20px;    
+    padding: 10px 0 10px 0;
+    margin-top: 30px;            
+    animation-name: footer-animation;
+    animation-duration: 1s;    
+}
+
+/* Animation FOOTER */
+@keyframes footer-animation{
+    from{                        
+        opacity: 0;
+        width: 0;
+    }
+
+    to{                        
+        opacity: 100%;
+        width: 100%;
+    }
+}
+
+.footer a{    
+    font-style: oblique;
+    color: #fff;
+}
+
+.footer a:hover,footer a:focus{
+    font-size: 18px;;
+    color: yellow;
+}

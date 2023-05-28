@@ -1,0 +1,58 @@
+<!-- AGENDADOR DE TAREFAS SIMPLES -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agende sua tarefa</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Agendador de tarefas</h1>
+        </div>
+    </header>
+
+    <section>
+        <div id="tasks-container">
+            <div id="tasks-header">
+                <h2>Salve o seu próximo passo</h2>
+                <form action=" " id="add-task-form">
+                    <input type="text" id="task-title" placeholder="Oque deseja fazer?">
+                    <button id="add-btn" type="submit">
+                        <ion-icon name="add-outline">+</ion-icon>
+                    </button>
+                </form>
+            </div>
+            <div id="tasks-list-container">
+                <h2>Suas tarefas</h2>
+                <ul id="task-list">
+                    <li class="task-box template hide">
+                        <span class="task-title"></span>
+                        <ion-icon class="done-btn" name="checkmark-outline">✓</ion-icon>
+                        <ion-icon class="remove-btn" name="close-outline">X</ion-icon>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <p>Copyright © 2022 <a href="https://www.linkedin.com/in/kesley-keven-%C2%A9-18358a1bb/" target="_blank">Kesley Developer</a></p>
+        </div>
+
+        <div class="footer-info">
+            <p>Este projeto foi desenvolvido com base de um curso</p>
+        </div>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+
+    <!-- API -->
+    <script type="module" src="https://unpkg.com/ionicons@6.0.3/dist/ionicons.js"></script>
+</body>
+</html>

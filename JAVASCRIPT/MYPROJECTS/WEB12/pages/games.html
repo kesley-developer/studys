@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Kame | Jogos</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="../imgs/kanji_img.png" rel="icon" type="image/png">
+</head>
+<body">
+    <header>
+        <div class="header-subtile">
+            <h2>Jogos</h2>
+        </div>
+
+        <div class="header-navegation">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Voltar ao inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div id="content">
+            <div class="apresentation">
+                <p>Interatividade</p>
+                <img src="../imgs/kanji_img.png" alt="dbz shirt logo image"/>
+            </div>        
+            
+            <div class="game-content">
+                <div class="game">
+                    <img src="..//imgs/games/dragon_balls_img.png"/>                    
+                    <h3>Faça um pedido</h3>
+                    <p>Peça um pedido a shenlong e veja se poderá ser realizado</p>
+                    <div class="user-input">
+                        <input type="text" id="user-text">
+                        <button type="button" id="btn-user">Fazer pedido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <footer>
+        <div>
+            <p>Copyright © 2022 <a href="https://www.linkedin.com/in/kesley-keven-%C2%A9-18358a1bb/" target="blank">Kesley Developer</a></p>
+        </div>
+        <div class="footer-info">
+            <p>Este projeto foi desenvolvido com as seguintes tecnologias</p>
+            <img src="../imgs/footer_img.png" alt="HTML & CSS & JS logo image">
+        </div>
+    </footer>
+
+    <script>        
+        
+        // Function for game events
+        function btnEvents(){
+
+            // Select elements button & input
+            const btn = document.querySelector("#btn-user");
+            const input = document.querySelector("#user-text");            
+            
+            // Select element for insert text & others
+            const div = document.querySelector(".user-input");                        
+            const img = document.querySelector(".game img")
+            const h3 = document.querySelector(".game h3");                                                                                                                        
+            const p = document.querySelector(".game p");
+                                    
+            h3.style.cssText = "background: orange; color: #fff; border-radius: 10px 10px 0px 0px;";
+            p.style.cssText = "background: orange; color: #fff;";
+            
+            console.log(div);
+
+            // Function for a request user
+            function resultRandom(){
+                let arr = ["Seu pedido será realizado!","Seu pedido ainda não pode ser realizado!"];
+                let size_arr = arr.length;
+                let n_random = Math.floor(Math.random() * size_arr);
+                
+                if(n_random == 0){
+                    window.alert(arr[n_random]);
+
+                    h3.textContent = "Seu pedido é uma ordem!".toUpperCase();                    
+                
+                }else if(n_random == 1){
+                    window.alert(arr[n_random]);
+
+                    h3.textContent = "Sinto muito, mas não posso realizar seu pedido no momento! Tente novamente!".toUpperCase();
+                }                        
+            };
+
+            // Function for click
+            function clickEvents(){
+
+                btn.addEventListener("click",function(){
+
+                    // Dates validation
+                    if(input.value.length == 0){                                                                                                
+                        img.setAttribute("src","../imgs/games/error_img.png","alt","error image");
+                            h3.textContent = "Preencha os campos solicitados!";
+                            p.textContent = "Não conseguimos entender o seu pedido"                            
+                            
+                            h3.style.color = "red";
+                            p.style.color = "red";
+                    
+                    }else{                                                                                                                        
+
+                        img.setAttribute("src","../imgs/games/shenlong_img.png","alt","shenlong image");                                                                                                
+                        p.textContent = "Seu pedido foi: " + input.value.toUpperCase();
+
+                        h3.style.color = "green";
+                        p.style.color = "green";
+                        
+                        input.value = "";
+
+                        // Result
+                        resultRandom();
+                    }
+
+                });                
+            };
+            clickEvents();
+
+            // Function for keys
+            function keysEvents(){
+
+                input.addEventListener("keydown",function(event){
+                    
+                    // Press key - ENTER
+                    if(event.key == "Enter"){                        
+                        
+                        // Dates validation
+                        if(input.value.length == 0){
+                            img.setAttribute("src","../imgs/games/error_img.png","alt","error image");
+                            h3.textContent = "Preencha os campos solicitados!";
+                            p.textContent = "Não conseguimos entender o seu pedido"
+                            
+                            h3.style.color = "red";
+                            p.style.color = "red";                            
+                        
+                        }else{
+                            img.setAttribute("src","../imgs/games/shenlong_img.png","alt","shenlong image");                            
+                            p.textContent = "Seu pedido foi: " + input.value.toUpperCase();
+
+                            h3.style.color = "green";                            
+                            p.style.color = "green";                                                                                                                                        
+
+                            input.value = "";
+
+                            // Result
+                            resultRandom();                                                                                    
+                        }
+                    }                    
+                });
+            };
+            keysEvents();            
+        
+        };
+        btnEvents();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+*{
+    margin:0;
+    padding:0;
+
+    overflow-x: hidden;
+}
+
+header{
+    background-color: orange;
+    color: black;
+
+    padding: 5px;
+}
+
+p{
+    font-size: 20px;
+}
+
+.buttons{
+    text-align: center;
+    
+    margin-top: 140px;        
+    margin-left: 25%;
+
+    width: 50%;    
+    
+    background-color: black;        
+    border-radius: 10px;
+}
+
+.buttons h2{
+    color: white;
+    font-size: 40px;    
+}
+
+button{
+    border-radius: 50px;
+
+    width: 80px;
+    height: 80px;
+        
+    margin-top: 10px;    
+
+    border-color: transparent;
+}
+
+button:hover{        
+    transition: 0.2s;
+
+    width: 60px;    
+
+    cursor: pointer;
+
+    opacity: 40%;
+}
+
+#btn-green{
+    background-color: green;
+}
+
+#btn-red{
+    background-color: red;
+}
+
+#btn-blue{
+    background-color: blue;    
+}
+
+footer{
+    background-color: orange;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+    margin-top: 50px;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: black;
+}

@@ -1,0 +1,75 @@
+body{
+    background: linear-gradient(to left ,orange,orangered);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    display: flex;        
+    flex-direction: column;    
+}
+
+/* SECTION */
+#content{            
+    background: linear-gradient(rgb(148, 80, 3),rgb(179, 81, 1));        
+    color: #fff;
+    border-radius: 20px;
+    margin-top: 50px;                
+    display: inline-block;            
+}
+
+.box-title{
+    background: orangered;        
+    padding: 10px;
+}
+
+.values{                    
+    margin-top: 50px;    
+}
+
+input{
+    padding: 5px;
+}
+
+.options{        
+    margin-top: 20px;
+    padding: 10px;   
+}
+
+button{        
+    width: 100px;
+    height: 30px;
+
+    cursor: pointer;        
+}
+
+button:focus,
+button:hover{    
+    transition: 0.2s;
+
+    background: orangered;
+    color: #fff;  
+    border: transparent;  
+}
+
+.operation-result{
+    margin-top: 50px;
+}
+
+#result{
+    color: #fff;
+    background: #fff;
+}
+
+/* FOOTER */
+.footer-box{    
+    background: orangered;
+    padding: 20px;
+    margin-top: 50px;    
+}
+
+.footer-box a{ 
+    color: #fff;
+}
+
+.footer-box a:focus,
+.footer-box a:hover{
+    color: #111;        
+}

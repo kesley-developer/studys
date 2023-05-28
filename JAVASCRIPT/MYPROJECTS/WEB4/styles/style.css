@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: orange;
+
+    padding: 5px;
+    color: black;
+}
+
+footer{
+    background-color: orange;
+    
+    text-align: center;
+    color: white;
+    
+    padding: 20px;
+
+    margin-top: 50px;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: black;
+}

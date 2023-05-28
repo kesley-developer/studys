@@ -1,0 +1,80 @@
+<!-- CALCULADORA -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCcalculator ©</title>    
+    <link rel="stylesheet" href="../styles/style.css">        
+    <link rel="icon" href="../icon/window_icon.png" type="image/png">
+</head>
+<body>
+    <main>        
+        <div class="personalization">
+            <h2>Themes</h2>
+            <span>                                
+                <input id="default" type="radio" name="theme" checked>
+                <label for="#default">Default</label>                
+            </span>
+            <span>                                
+                <input id="theme-1" type="radio" name="theme">
+                <label for="#theme-1">Theme 1</label>                
+            </span>
+            <span>                                
+                <input id="theme-2" type="radio" name="theme">
+                <label for="#theme-2">Theme 2</label>                
+            </span>
+            <span>                                
+                <input id="theme-3" type="radio" name="theme">
+                <label for="#theme-3">Theme 3</label>                
+            </span>
+        </div>        
+        <div class="title">
+            <h3>SCcalculator © - Simple Calculator</h3>
+        </div>
+        <div class="calculator">            
+            <div class="display">
+                <input type="text" disabled>
+            </div>
+            <div class="btns-calculator">
+                <div>                                        
+                    <button id="btn-clear">CLEAR</button>                                        
+                    <button id="parentheses">(</button>
+                    <button id="parentheses">)</button>
+                    <button id="operator">÷</button>
+                </div>
+                <div>
+                    <button>7</button>            
+                    <button>8</button>
+                    <button>9</button>
+                    <button id="operator">x</button>
+                </div>       
+                <div>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button id="operator">-</button>
+                </div>         
+                <div>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button id="operator">+</button>
+                </div>
+                <div>
+                    <button>0</button>
+                    <button>.</button>
+                    <button id="btn-delete">DEL</button>
+                    <button id="btn-result">=</button>
+                </div>
+            </div>            
+        </div>    
+        <div class="footer">
+            <p>Copyright © 2023 <a href="https://www.linkedin.com/in/kesley-keven-%C2%A9-18358a1bb/" target="_blank">Kesley Developer</a></p>
+        </div>                   
+    </main>        
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

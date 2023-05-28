@@ -1,0 +1,51 @@
+<!-- EXERCICIO 7 - TRABALHANDO COM MÓDULOS -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulos</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Módulos</h1>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <ul>
+                <li>Resumidamente os módulos em JavaScript é uma forma de compartilhar informações entre arquivos;</li>
+                <li>Dessa forma, todos os arquivos que realizarem a importação desse módulo poderão utilizar e usufruir de suas funções ou informações que foram expostas;</li>
+                <li>Utilizamos export para informar que algo será exportado e import para importar este algo;</li>
+                <li>Para efetuar a modularização, é preciso criar um pacote que é arquivo chamado package.json na pasta do projeto e para isso usamos o terminal ou criamos manualmente;</li>
+            </ul>
+        </div>
+
+        <!-- Representação do pacote -->
+        <div style="background: #111; color: green; border-radius: 5px;">
+            <h2 style="color: yellow;">Exemplo do pacote</h2>
+            <h3 style="color: yellow;">package.json</h3>
+            <p style="color: white;">{</p>
+            <div style="padding-left: 5%;">                
+                <p>     "name": "register-persons", - NOME DO PACOTE</p>
+                <p>     "version": "1.0.0", - VERSÃO</p>
+                <p>     "description": "Registrando pessoas na classe", - DESCRIÇÃO DO PACOTE</p>
+                <p>     "main": ".js/main.js", - CAMINHO E TIPO DE ARQUIVO</p>
+                <p>     "scripts": {</p>
+                <p>         "test": "echo \" error: no test specified\" && exit1"</p>
+                <p>     }, - COMANDO DE TESTE</p>
+                <p>     "author": "Kesley Keven", - AUTOR</p>
+                <p>     "license": "ISC", - LICENÇA</p>
+                <p>     "type": "module" - TIPO DE PACOTE</p>                
+            </div>
+            <p style="color: white;">}</p>
+        </div>        
+    </section>
+
+    <script type="module" src="main.js"></script>    
+</body>
+</html>

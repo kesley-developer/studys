@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    padding: 0;    
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* index.html */
+
+body{
+    background: url(..//imgs/background_index.jpg);    
+    background-repeat: no-repeat;    
+    background-size: cover;
+    
+
+    animation-name: body-animation;
+    animation-duration: 1s;
+}
+
+/* ANIMATION */
+@keyframes body-animation{
+    from{                        
+        opacity: 0%
+    }
+    to{        
+        opacity: 100%;        
+    }
+}
+
+/* HEADER */
+header{
+    background: linear-gradient(rgb(255, 145, 0),rgb(255, 123, 0));
+    color: #fff;        
+
+    padding: 20px;
+
+    border-bottom: 3px solid #222;    
+    border-right: 10px solid #222;
+}
+
+header h1{
+    font-size: 40px;
+
+    border-left: 10px solid #fff;
+    border-top-left-radius: 24px;
+    padding-left: 15px;                  
+}
+
+.header-subtitle{
+    margin-left: 30px;
+        
+}
+
+.header-navegation{
+    margin-top: 15px;
+
+    float: right;    
+}
+
+.header-navegation p{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.header-navegation ul{
+    display: flex;    
+    
+    list-style: none;
+}
+
+.header-navegation li{            
+    margin-left: 12px;
+
+    margin-top: -40px;
+}
+
+.header-navegation a{
+    transition: 0.2s;
+
+    background: rgba(27, 27, 27, 0.384);
+    color:#fff;
+    text-decoration: none;                
+
+    padding: 8px;    
+
+    border-radius: 5px;
+}
+
+.header-navegation a:hover,
+.header-navegation a:focus{
+    transition: 0.2s;
+
+    background: #111;    
+}
+
+/* SECTION */
+.apresentation{    
+    background-color: rgba(17, 17, 17, 0.493);    
+    color: #fff;
+    text-align: center;
+    font-size: 24px;    
+
+    padding: 10px;
+}
+
+.apresentation p{
+    font-family: monospace;    
+}
+
+.apresentation img{
+    width: 140px;
+
+    animation-name: rotation;
+    animation-duration: 60s;    
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+/* ANIMATION */
+@keyframes rotation {    
+    from{                
+        rotate: 0deg;
+    }
+    
+    to{                
+        rotate: 400deg;        
+    }    
+}
+
+.menu{
+    text-align: center;
+}
+
+.menu-image img{
+    margin-top: 180px;
+    
+    width: 250px;
+    height: 340px;
+}
+
+.menu-buttons{
+    padding: 24px;
+}
+
+.menu button{
+    transition: 0.2s;
+        
+    font-size: 16px;
+
+    background: #111;
+    color: #fff;
+    border-right: 10px solid orange;
+    border-radius: 24px;
+    
+    width: 120px;    
+    height: 50px;        
+
+    cursor: pointer;
+}
+
+.menu button:hover,
+.menu button:focus{
+    background: orange;
+    border-right: 10px solid #111;
+    color: #111; 
+    
+    
+}
+
+/* FOOTER */
+footer{
+    background: linear-gradient(rgb(255, 145, 0),rgb(255, 123, 0));
+    
+    text-align: center;    
+    
+    padding: 44px 24px 24px 24px;    
+
+    border-top: 3px solid #222
+}
+
+footer a{
+    transition: 0.2s;
+    
+    color: #fff;
+    font-size: 15px;  
+    
+    padding: 5px;
+}
+
+footer a:hover,
+footer a:focus{
+    transition: 0.2s;
+    
+    background: #111;            
+    border-radius: 5px;        
+}
+
+.footer-info{    
+    margin-top: 10px;
+
+    font-size: 14px;        
+}
+
+.footer-info img{    
+    width: 120px;
+    height: 50px;
+
+    margin-top: 10px;
+}
+
+/* chars.html */
+
+/* SECTION */
+.chars-list{
+    background: rgba(17, 17, 17, 0.493);
+    padding: 24px;            
+}
+
+.chars-list ul{            
+    columns: 4;
+
+    list-style: none;           
+}
+
+.chars-list img{        
+    width: 50px;
+    height: 80px;
+    padding: 10px;
+
+    border-radius: 80px;
+    cursor: crosshair;            
+}
+
+.chars-list img:hover,
+.chars-list img:focus{        
+    background: linear-gradient(orange,#fff,orange);        
+}
+
+/* creators.html */
+
+/* SECTION */
+.creator-info{
+    background: rgba(17,17,17,0.493);
+    padding: 24px;   
+    
+    text-align: center;
+}
+
+.informations{
+    background: rgb(255, 145, 0);
+    border-right: 50px groove orange;
+    border-radius: 50px 50px 100px 100px;
+        
+    padding: 44px;    
+
+    width: 50%;
+}
+
+.informations img{
+    margin-left: -30px;
+    
+    width: 200px;
+    height: 200px;    
+
+    border-left: 10px groove #fff;
+    border-radius: 24px;    
+}
+
+.informations h2{
+    color: #fff;
+
+    border-left: 5px solid #fff; border-right: 5px solid #fff;
+    border-radius: 10px 20px;
+
+    padding: 10px;
+    margin-left: -20px;
+}
+
+.informations p{
+    padding-bottom: 10px;
+}
+
+.font a{        
+    color: #fff;    
+}
+
+.font a:focus,
+.font a:hover{
+    color: #111;
+}
+
+/* games.html */
+
+/* SECTION */
+.game-content{
+    background: rgba(17,17,17,0.493);
+    padding: 24px;         
+
+    text-align: center;
+}
+
+.game{
+    background: linear-gradient(orange,orange,#fff,orange,orange);
+    
+    border-right: 50px solid #fff; border-left: 50px solid #fff;    
+    border-radius: 150px;
+    padding: 100px 50px 100px 50px;            
+}
+
+.game p{
+    color: #fff;
+}
+
+.game img{
+    width: 180px;
+    height: 140px;
+
+    animation-name: filter-animation;    
+    animation-duration: 1.0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes filter-animation{
+    to{
+        filter: contrast(100%) brightness(100%);
+    }
+
+    from{
+        filter: contrast(300%) brightness(300%);
+    }
+}
+
+.user-input{
+    background: #fff;
+    padding: 10px;    
+
+    border-radius: 0px 0px 50px 50px;
+    
+    text-align: center;
+    
+}
+
+.user-input input{    
+    padding: 10px;
+
+    background: orange;
+}
+
+.user-input input:focus{
+    background: #fff;        
+}
+
+.user-input button{  
+    padding: 11px;
+    margin-left: -2px;
+    border-radius: 0px 5px 5px 0px;
+
+    cursor: pointer;    
+}
+
+.user-input button:hover,
+.user-input button:focus{
+    background: orange;
+    color: #fff;
+}
+
+
+

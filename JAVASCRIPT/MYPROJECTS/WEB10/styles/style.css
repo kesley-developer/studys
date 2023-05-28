@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding:0;
+
+    overflow: hidden;
+}
+
+header{
+    background-color: orange;
+    color: black;
+
+    padding: 5px;
+}
+
+#content{
+    text-align: center;
+
+    margin-top: 15%;    
+}
+
+#key h2{
+    background-image: linear-gradient(#111,#112,#111);    
+    color: #fff;    
+    
+    font-size: 54px;
+    
+    width: 250px;
+
+    margin-left: 40%;
+    
+    border-radius: 5px;
+    
+}
+
+.info{
+    font-size: 24px;
+}
+
+footer{
+    background-color: orange;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+    margin-top: 50px;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    font-size: 20px;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: black;
+}

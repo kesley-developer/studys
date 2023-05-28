@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Kame | Personagens</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="../imgs/kanji_img.png" rel="icon" type="image/png">
+</head>
+<body>
+    <header>        
+        <div class="header-subtitle">
+            <h2>Personagens</h2>
+        </div>
+
+        <div class="header-navegation">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Voltar ao inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>    
+
+    <section>
+        <div id="content">
+            <div class="apresentation">
+                <p>Escolha seu personagem</p>
+                <img src="../imgs/kanji_img.png" alt="dbz shirt logo image">                
+            </div>            
+            <div class="chars-list">
+                <nav>
+                    <ul>
+                        <li><img src="../imgs/chars/goku_img.png" alt="son goku image" id="goku"></li>
+                        <li><img src="../imgs/chars/vegeta_img.png" alt="vegeta image" id="vegeta"></li>
+                        <li><img src="../imgs/chars/gohan_img.png" alt="gohan image" id="gohan"></li>
+                        <li><img src="../imgs/chars/trunks_img.png" alt="trunks image" id="trunks"></li>
+                        <li><img src="../imgs/chars/kuririn_img.png" alt="kuririn image" id="kuririn"></li>
+                        <li><img src="../imgs/chars/piccolo_img.png" alt="piccolo image" id="piccolo"></li>
+                        <li><img src="../imgs/chars/tenshinhan_img.png" alt="tenshinhan image" id="tenshinhan"></li>
+                        <li><img src="../imgs/chars/chaos_img.png" alt="chaos image" id="chaos"></li>
+                        <li><img src="../imgs/chars/yamcha_img.png" alt="yamcha image" id="yamcha"></li>
+                        <li><img src="../imgs/chars/master_roshi_img.png" alt="master roshi image" id="master-roshi"></li>
+                        <li><img src="../imgs/chars/mr_satan_img.png" alt="mr satan image" id="mr-satan"></li>                        
+                        <li><img src="../imgs/chars/cell_img.png" alt="cell image" id="cell"></li>
+                        <li><img src="../imgs/chars/android_16_img.png" alt="android 16 image" id="android-16"></li>
+                        <li><img src="../imgs/chars/android_17_img.png" alt="android 17 image" id="android-17"></li>
+                        <li><img src="../imgs/chars/android_18_img.png" alt="android 18 image" id="android-18"></li>
+                        <li><img src="../imgs/chars/android_19_img.png" alt="android 19 image" id="android-19"></li>
+                        <li><img src="../imgs/chars/android_20_img.png" alt="android 20 image" id="android-20"></li>
+                        <li><img src="../imgs/chars/freeza_img.png" alt="freeza image" id="freeza"></li>
+                        <li><img src="../imgs/chars/fat_boo_img.png" alt="fat boo image" id="fat-boo"></li>
+                        <li><img src="../imgs/chars/evil_boo_img.png" alt="evil boo image" id="evil-boo"></li>
+                        <li><img src="../imgs/chars/broly_img.png" alt="broly image" id="broly"></li>
+                    </ul>
+                </nav>                
+            </div>  
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <p>Copyright © 2022 <a href="https://www.linkedin.com/in/kesley-keven-%C2%A9-18358a1bb/" target="blank">Kesley Developer</a></p>
+        </div>
+        <div class="footer-info">
+            <p>Este projeto foi desenvolvido com as seguintes tecnologias</p>
+            <img src="../imgs/footer_img.png" alt="HTML & CSS & JS logo image">
+        </div>
+    </footer>
+    
+    <script>                                        
+                    
+        function charsEvents(){
+
+            // Select container chars list
+            const chars_list = document.querySelector(".chars-list");
+
+            // Creat container for insert elements
+            const div = document.createElement("div");                        
+            const h2 = document.createElement("h2");                        
+            const img = document.createElement("img");                        
+            
+            // Create div & elements for insert power level
+            const div_info = document.createElement("div");                                                                                                                                                                    
+            const ul = document.createElement("ul");
+            
+            div_info.setAttribute("class","chars-power");
+                                    
+            // Create elements li, h3 & p in FOR                                                
+            for(i=0;i < 3;i+=1){                            
+                let li = document.createElement("li");
+                let h3 = document.createElement("h3");
+                let p = document.createElement("p");                            
+                
+                li.appendChild(h3);
+                li.appendChild(p);
+                ul.appendChild(li);
+
+                if(i==0){                                
+                    h3.textContent = "ATAQUE";
+                    p.setAttribute("id","atk");                                                                                                                                                                     
+                
+                }else{
+                    
+                    if(i==1){                                    
+                        h3.textContent = "DEFESA";
+                        p.setAttribute("id","def");
+                    
+                    }else if(i==2){                                    
+                        h3.textContent = "AGILIDADE";
+                        p.setAttribute("id","agi");
+                    }
+                }
+            }
+            div_info.appendChild(ul);                                                
+            
+            div.setAttribute("class","chars-info");
+                                    
+            // Styles
+            div.style.cssText = "display: none; background: linear-gradient(rgb(255, 123, 0),rgb(255, 145, 0),rgb(255, 123, 0)); border-radius: 24px; padding-bottom: 100px; border-bottom: 10px solid orange; border-left: 5px solid orange;";
+            h2.style.cssText = "color: #fff; text-align: center;";
+            img.style.cssText = "background: orange; cursor: default; width: 150px; height: 170px; border-radius: 0px; padding: 10px; border-radius: 24px;";                        
+            div_info.style.cssText = "padding: 5%; padding-bottom: 40px; background: rgb(255, 123, 0);";
+            ul.style.cssText = "padding: 10px; list-style: none; position: absolute; left: 25px; background: orange; border-radius: 10px; border-right: 50px solid orange; position: absolute; right: 0px; width: 65%; text-align: center; border-right: 10px solid rgb(255, 123, 0);";
+
+            // Insert elements
+            div.appendChild(img);
+            div.appendChild(h2);                                                
+            div.appendChild(div_info);                        
+            chars_list.appendChild(div);                        
+            
+            console.log(chars_list);                        
+            
+            // Select elements in power chars list
+            const atk = document.querySelector("#atk");
+            const def = document.querySelector("#def");
+            const agi = document.querySelector("#agi");
+
+            // Styles                        
+            atk.style.cssText = "background: red; color: #fff; border-style: groove; border-radius: 10px;";
+            def.style.cssText = "background: blue; color: #fff; border-style: groove; border-radius: 10px;";
+            agi.style.cssText = "background: green; color: #fff; border-style: groove; border-radius: 10px;";                                                            
+
+            function selectChars(){
+                
+                // GOKU
+                const goku = document.querySelector("#goku");                            
+                goku.addEventListener("click",function(){                                
+                    div.style.display = "inline-block";
+                    
+                    img.setAttribute("src","../imgs/chars/goku_img.png","alt","goku image");                            
+                    h2.textContent = "SON GOKU";
+
+                    // Power level                                                                
+                    atk.textContent = "+8000";
+                    def.textContent = "+8000";
+                    agi.textContent = "+5000";                    
+                    
+                });
+
+                // VEGETA
+                const vegeta = document.querySelector("#vegeta");
+                vegeta.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/vegeta_img.png","alt","vegeta image");
+                    h2.textContent = "VEGETA";
+
+                    // Power level
+                    atk.textContent = "+8050";
+                    def.textContent = "+7950";
+                    agi.textContent = "+4800";
+                });
+
+                // GOHAN
+                const gohan = document.querySelector("#gohan");
+                gohan.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/gohan_img.png","alt","gohan image");
+                    h2.textContent = "GOHAN";
+
+                    // Power level
+                    atk.textContent = "+8150";
+                    def.textContent = "+7200";
+                    agi.textContent = "+5100";
+                });
+
+                // TRUNKS
+                const trunks = document.querySelector("#trunks");
+                trunks.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/trunks_img.png","alt","trunks image");
+                    h2.textContent = "TRUNKS";
+
+                    // Power level
+                    atk.textContent = "+7200";
+                    def.textContent = "+7400";
+                    agi.textContent = "+4800";
+                });
+
+                // KURIRIN
+                const kuririn = document.querySelector("#kuririn");
+                kuririn.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/kuririn_img.png","alt","kuririn image");
+                    h2.textContent = "KURIRIN";
+
+                    // Power level
+                    atk.textContent = "+4800";
+                    def.textContent = "+3000";
+                    agi.textContent = "+3500";
+                });
+
+                // PICCOLO
+                const piccolo = document.querySelector("#piccolo");
+                piccolo.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/piccolo_img.png","alt","piccolo image");
+                    h2.textContent = "PICCOLO";
+
+                    // Power level
+                    atk.textContent = "+5000";
+                    def.textContent = "+4000";
+                    agi.textContent = "+4200";
+                });
+
+                // TENSHINHAN
+                const tenshinhan = document.querySelector("#tenshinhan");
+                tenshinhan.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/tenshinhan_img.png","alt","tenshinhan image");
+                    h2.textContent = "TENSHINHAN";
+
+                    // Power level
+                    atk.textContent = "+4900";
+                    def.textContent = "+3100";
+                    agi.textContent = "+3300";
+                });
+
+                // CHAOS
+                const chaos = document.querySelector("#chaos");
+                chaos.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/chaos_img.png","alt","chaos image");
+                    h2.textContent = "CHAOS";
+
+                    // Power level
+                    atk.textContent = "+2500";
+                    def.textContent = "+2000";
+                    agi.textContent = "+3000";
+                });
+
+                // YAMCHA
+                const yamcha = document.querySelector("#yamcha");
+                yamcha.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/yamcha_img.png","alt","yamcha image");
+                    h2.textContent = "YAMCHA";
+
+                    // Power level
+                    atk.textContent = "+3000";
+                    def.textContent = "+2900";
+                    agi.textContent = "+2800";
+                });
+
+                // MASTER ROSHI
+                const master_roshi = document.querySelector("#master-roshi");
+                master_roshi.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/master_roshi_img.png","alt","master roshi image");
+                    h2.textContent = "MESTRE KAME";
+
+                    // Power level
+                    atk.textContent = "+2600";
+                    def.textContent = "+2100";
+                    agi.textContent = "+2000";
+                });
+
+                // MR SATAN
+                const mr_satan = document.querySelector("#mr-satan");
+                mr_satan.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/mr_satan_img.png","alt","mr satan image");
+                    h2.textContent = "MR SATAN";
+
+                    // Power level
+                    atk.textContent = "+200";
+                    def.textContent = "+100";
+                    agi.textContent = "+150";
+                });
+
+                // CELL
+                const cell = document.querySelector("#cell");
+                cell.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/cell_img.png","alt","cell image");
+                    h2.textContent = "CELL";
+
+                    // Power level
+                    atk.textContent = "+7200";
+                    def.textContent = "+8200";
+                    agi.textContent = "+5000";
+                });
+
+                // ANDROID 16
+                const android_16 = document.querySelector("#android-16");
+                android_16.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/android_16_img.png","alt","android 16 image");
+                    h2.textContent = "ANDROID 16";
+
+                    // Power level
+                    atk.textContent = "+4000";
+                    def.textContent = "+3000";
+                    agi.textContent = "+3300";
+                });
+
+                // ANDROID 17
+                const android_17 = document.querySelector("#android-17");
+                android_17.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/android_17_img.png","alt","android 17 image");
+                    h2.textContent = "ANDROID 17";
+
+                    // Power level
+                    atk.textContent = "+5000";
+                    def.textContent = "+4000";
+                    agi.textContent = "+4000";
+                });
+
+                // ANDROID 18
+                const android_18 = document.querySelector("#android-18");
+                android_18.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/android_18_img.png","alt","android 18 image");
+                    h2.textContent = "ANDROID 18";
+
+                    // Power level
+                    atk.textContent = "+5500";
+                    def.textContent = "+3500";
+                    agi.textContent = "+3950";
+                });
+
+                // ANDROID 19
+                const android_19 = document.querySelector("#android-19");
+                android_19.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/android_19_img.png","alt","android 19 image");
+                    h2.textContent = "ANDROID 19";
+
+                    // Power level
+                    atk.textContent = "+3800";
+                    def.textContent = "+3500";
+                    agi.textContent = "+3300";
+                });
+
+                // ANDROID 20
+                const android_20 = document.querySelector("#android-20");
+                android_20.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/android_20_img.png","alt","android 20 image");
+                    h2.textContent = "ANDROID 20";
+
+                    // Power level
+                    atk.textContent = "+3900";
+                    def.textContent = "+3450";
+                    agi.textContent = "+3400";
+                });
+
+                // FREEZA
+                const freeza = document.querySelector("#freeza");
+                freeza.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/freeza_img.png","alt","freeza image");
+                    h2.textContent = "FREEZA";
+
+                    // Power level
+                    atk.textContent = "+7600";
+                    def.textContent = "+7200";
+                    agi.textContent = "+5000";
+                });
+
+                // FAT BOO
+                const fat_buu = document.querySelector("#fat-boo");
+                fat_buu.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/fat_boo_img.png","alt","fat boo image");
+                    h2.textContent = "MAJIN BOO"
+
+                    // Power level
+                    atk.textContent = "+7300";
+                    def.textContent = "+8500";
+                    agi.textContent = "+4800";
+                });
+
+                // EVIL BOO
+                const evil_buu = document.querySelector("#evil-boo");
+                evil_buu.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/evil_boo_img.png","alt","evil boo image");
+                    h2.textContent = "EVIL BOO";
+
+                    // Power level
+                    atk.textContent = "+8000";
+                    def.textContent = "+8500";
+                    agi.textContent = "+5100";
+                });
+
+                // BROLY
+                const broly = document.querySelector("#broly");
+                broly.addEventListener("click",function(){
+                    div.style.display = "inline-block";
+
+                    img.setAttribute("src","../imgs/chars/broly_img.png","alt","broly image");
+                    h2.textContent = "BROLY";
+
+                    // Power level
+                    atk.textContent = "+9500";
+                    def.textContent = "+8900";
+                    agi.textContent = "+4900";
+                });
+                                                                                                        
+            }                     
+            selectChars();           
+        }
+        charsEvents();
+    </script>
+</body>
+</html>

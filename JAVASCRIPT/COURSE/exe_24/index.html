@@ -1,0 +1,45 @@
+<!-- EXERCICIO 24 - ALTERANDO O CONTEÚDO DO DOCUMENTO HTML -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterando o conteúdo</title>
+</head>
+<body>
+    <header>
+        <h1>Alterando o conteúdo HTML com JS</h1>    
+    </header>
+
+    <section>
+        <div>
+            <ul>
+                <li>Podemos alterar o texto de qualquer elemento de forma fácil com JavaScript;</li>
+                <li>Posteriormente poderemos atrelar esta ação com alguma evento;</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>innerHTML</h2>
+            <ul>
+                <li>Não recomendado</li>                
+            </ul>
+        </div>
+
+        <div>
+            <h2>textContent</h2>
+            <ul>
+                <li>Recomendado, mais utilizado e tem a melhor performance</li>
+            </ul>
+        </div>
+    </section>    
+
+    <!-- Elementos a serem manipulados -->
+    <h2 id="title">My title</h2>
+    <h3 id="sub-title">My title</h3>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

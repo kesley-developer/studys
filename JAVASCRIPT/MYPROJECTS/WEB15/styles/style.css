@@ -1,0 +1,99 @@
+
+body{
+    background: linear-gradient(to left, rgb(6, 114, 238),#fffb,orange);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;                         
+}
+
+/* MAIN */
+#box{
+    background: rgb(38, 100, 172);        
+    color: #fff;
+    display: inline-block;   
+    border-radius: 10px; 
+}
+
+form{
+    background: #fff;
+    color: rgb(38, 100, 172);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;    
+    align-items: flex-start; 
+    gap: 10px;
+    font-size: 18px;    
+}
+
+input{
+    font-size: 18px;
+}
+
+input:focus{
+    transition: 0.2s;
+    background: rgb(38, 100, 172);
+    color: #fff;
+}
+
+.box-resultIMC{    
+    background: #fff;
+    color: #111;        
+    text-align: justify;
+    padding: 0px 0px 10px 25px;    
+}
+
+#btn-confirm{
+    transition: 0.2s;
+    background: orange;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;;
+    cursor: pointer;        
+}
+
+#btn-confirm:hover{
+    transition: 0.2s;
+    background:rgb(38, 100, 172);
+    border-right: 10px groove orange;    
+    color: #fff;           
+}
+
+.result{
+    display: flex;
+    padding-top: 10px;
+    opacity: 0;
+}
+
+#IMC{
+    background: orange;
+    color: #111;
+    border: 5px double #fff;         
+    font-size: 20px;
+    width: 150px;
+    text-align: center;
+}
+
+.classification{
+    background: rgb(38,100,172);     
+    text-align: center;
+    font-size: 15px;    
+}
+
+.classification ul{            
+    list-style-type: circle;    
+}
+
+#footer{        
+    background: orange;
+    color: #fff;    
+    border-top: 10px dashed rgb(38,100,172);
+    padding: 10px;
+}
+
+#footer a{
+    color: #fff;
+}
+
+#footer a:focus,
+#footer a:hover{
+    color: #111;    
+}

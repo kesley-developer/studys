@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;    
+}
+
+header{
+    background-color: orange;
+    color: black;
+
+    padding: 5px;
+}
+
+footer{
+    background-color: orange;
+    
+    text-align: center;
+    color: white;
+    
+    padding: 20px;
+
+    margin-top: 500px;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: black;
+}
+
+.info{
+    text-align: center;
+
+    font-size: 40px;
+
+    margin-top: 10%;
+}

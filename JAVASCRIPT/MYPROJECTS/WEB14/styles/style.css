@@ -1,0 +1,54 @@
+body{        
+    background: linear-gradient(to left,green,orange,green);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;               
+    text-align: center;
+}
+
+
+/* SECTION */
+section{
+    background: rgb(240, 224, 156);        
+    border: 5px dotted #fff;
+    display: inline-block;        
+}
+
+#list-infos{
+    background: orange;    
+    font-size: 12px;
+    display: flex;            
+}
+
+#list-infos h2{
+    color: #fff;
+    margin-left: 10px;
+}
+
+#list-infos ul{        
+    background: green;
+    color: #fff;
+    font: 15px ;        
+    text-align: left;
+    list-style: none;    
+    border: 2px groove #111;
+    border-left: 5px double #fff;
+    border-radius: 5px;
+    margin-left: 80px;
+    padding: 5px;
+}
+
+/* FOOTER */ 
+#footer{
+    background: orange;
+    font-size: 18px;
+    color: #fff;
+    padding: 15px;
+}
+
+#footer a{    
+    color: #fff;
+}
+
+#footer a:focus,
+#footer a:hover{
+    color: green;
+}

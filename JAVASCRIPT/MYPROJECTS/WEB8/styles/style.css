@@ -1,0 +1,203 @@
+body{
+    overflow-x: hidden;
+    margin:0;
+    padding:0;
+    
+    font-family: Helvetica;
+    color: #FFF;
+    text-align: center;
+
+    background-image: linear-gradient(to LEFT,rgb(255, 127, 77),rgb(197, 64, 197));
+
+    padding-top: 80px;
+}
+
+header{    
+    position: absolute;
+    top:-10px;
+    
+
+    width: 100%;
+    
+    background-color: rgba(245, 241, 241, 0.61);
+    
+    text-align: left;
+    color:#111;
+
+    border-left: 10px solid rgb(255, 127, 77);
+}
+
+header h1{    
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+
+    margin-left: 40px;
+}
+
+#tasks-container{
+    width: 500px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* tasks form */
+#tasks-header{
+    margin-top: 40px;
+}
+
+#add-task-form{
+    position: relative;
+}
+
+#add-task-form input{
+    box-sizing: border-box;;
+
+    border: 1px solid rgb(197, 64, 197);
+    background: #FFF;
+    color: rgb(197, 64, 197);
+    padding: 15px;
+    font-size: 18px;
+    width: 100%;
+}
+
+#add-task-form input::placeholder{
+    color:rgb(197, 64, 197);
+}
+
+#add-task-form input:focus{
+    outline: none;
+}
+
+#add-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding-top: 3px;
+
+    background: #FFF;
+    border: 1px solid rgb(197, 64, 197);
+
+    cursor: pointer;
+
+    transition: 0.5s;
+
+    width: 60px;
+    height: 53px;    
+}
+
+#add-btn:hover{
+    background-color: rgb(197, 64, 197);
+    color: #FFF;
+}
+
+ion-icon{
+    font-size: 25px;
+}
+
+/* tasks container */
+#task-list{
+    list-style: none;
+    
+    padding-left: 0;
+}
+
+#task-list li{
+    transition: 0.5s;
+    
+    font-weight: bold;;    
+    text-align: left;
+
+    height: 50px;
+    line-height: 50px;
+
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 15px;
+
+    border-bottom: 3px solid rgb(197, 64, 197);
+    
+    background-color: #FFF;
+    color: rgb(197, 64, 197);
+}
+
+#task-list li span{
+    font-size: 18px;
+}
+
+#task-list ion-icon{
+    transition: 0.5s;
+    
+    position: absolute;
+    top:0;
+    padding: 5px;
+
+    width: 30px;
+    height: 40px;    
+
+    cursor: pointer;
+}
+
+.done-btn{
+    right: 40px;
+}
+
+.done-btn:hover{
+    color: #FFF;
+    background-color: rgb(15, 202, 15);
+}
+
+.remove-btn{
+    right: 0;
+}
+
+.remove-btn:hover{
+    color: #FFF;
+    background-color: rgb(235, 12, 12);
+}
+
+.hide{
+    display: none;    
+}
+
+#task-list li.done{
+    background-color: rgb(197, 64, 197);
+    
+    color: #FFF;
+    text-decoration: line-through;
+}
+
+#add-btn{
+    color: rgb(197, 64, 197);
+}
+
+footer{    
+    background-color: rgba(245, 241, 241, 0.61);
+    color: #111;
+
+    position: relative;
+    bottom: -220px;
+
+    width: 100%;
+    padding: 33px;    
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px
+}
+
+footer a{        
+    transition: 0.5s;
+    
+    color: orangered;
+
+    font-style: italic;
+}
+
+footer a:hover{
+    color: white;
+}
+
+.footer-info p{
+    font-size: 10px;        
+}

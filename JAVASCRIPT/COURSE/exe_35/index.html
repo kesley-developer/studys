@@ -1,0 +1,101 @@
+<!-- EXERCICIO 35 - TRABALHANDO COM EVENTOS NA PÁGINA -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <header>
+        <h1>Eventos</h1>
+    </header>
+
+    <section>
+        <div>            
+            <ul>
+                <li>Por meio de JavaScript podemos mapear algumas ações dos usuários, que chamamos de eventos;</li>
+                <li>Como: movimento do mouse, click, mouse entrando ou saindo de um elemento, carregamento da página e etc;</li>
+                <li>E então criar comportamento interessante como: animação de menu abrindo e fechando;</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>onload</h2>
+            <ul>
+                <li>O onload é ativado ao carregar a página;</li>
+                <li>Podemos depois desse evento realizar alguma ação no nosso projeto;</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>click</h2>
+            <ul>
+                <li>O click é ativado quando o usuário clica em um elemento em que atrelamos o evento;</li>
+                <li>Após a ação podemos fazer as modificações e alterações no HTML/CSS que quisermos;</li>
+            </ul>
+
+            <!-- Aplicando método  -->
+            <div>
+                <button id="my-button">Click here!</button>
+            </div>            
+        </div>
+
+        <div>
+            <h2>dblclick</h2>
+            <ul>
+                <li>Similar ao click, o evento dblclick funciona quando o usuário efetua duplo click;</li>                
+            </ul>
+
+            <!-- Aplicando método -->
+            <div>
+                <button id="other-button">Double click here!</button>
+            </div>
+        </div>
+
+        <div>
+            <h2>mouseover</h2>
+            <ul>
+                <li>O mouseover é ativado quando o ponteiro do mouse passa em cima do elemento que criamos o evento;</li>
+            </ul>            
+
+            <!-- Aplicando método -->
+            <div>
+                <button id="btn">Pass mouse!</button>
+            </div>
+        </div>
+
+        <div>
+            <h2>mouseout</h2>
+            <ul>
+                <li>O mouseout é um evento que pode ter sincronia com o mouseover;</li>
+                <li>Este evento é ativado quando o ponteiro do mouse sai do elemento;</li>
+            </ul>
+
+            <!-- Aplicando método -->
+            <div>
+                <button id="other-btn">Remove mouse!</button>
+            </div>
+        </div>        
+
+        <div>
+            <h2>keydown</h2>
+            <ul>
+                <li>O evento keydown é ativado quando uma tecla é pressionada;</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>keyup</h2>
+            <ul>
+                <li>Este evento funciona quando a tecla volta a posição normal;</li>
+                <li>Pode funcionar sincronizado com o keydown</li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
